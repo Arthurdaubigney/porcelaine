@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ESTIMATION_HREF, NAV, SITE } from "@/lib/site";
+import { Logo } from "./Logo";
 
 export function Header() {
   const pathname = usePathname();
@@ -33,8 +34,7 @@ export function Header() {
     <header className={`header${scrolled ? " is-scrolled" : ""}${open ? " is-open" : ""}`}>
       <div className="container header__bar">
         <Link href="/" className="brand" aria-label={`${SITE.name} — accueil`}>
-          <span className="brand__mark" aria-hidden="true" />
-          <span className="brand__name">{SITE.name}</span>
+          <Logo />
         </Link>
 
         <nav id="menu" className="nav" aria-label="Navigation principale">

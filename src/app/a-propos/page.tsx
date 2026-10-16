@@ -1,4 +1,5 @@
-import { Art } from "@/components/Art";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Photo } from "@/components/Photo";
 import { CtaBand } from "@/components/CtaBand";
 import { Reveal } from "@/components/Reveal";
 import { pageMetadata } from "@/lib/seo";
@@ -23,6 +24,7 @@ export default function AboutPage() {
       <section className="page-hero">
         <div className="container hero__grid hero__grid--about">
           <div>
+            <Breadcrumbs trail={[{ name: "À propos", path: "/a-propos" }]} />
             <p className="eyebrow">À propos &amp; engagements</p>
             <h1 className="h1">Une maison d'expertise passionnée par la porcelaine ancienne</h1>
             <p className="lead">
@@ -30,15 +32,12 @@ export default function AboutPage() {
               honnêteté.
             </p>
           </div>
-          <div className="hero__panel hero__panel--small">
-            <Art
-              src="/art/tasse-compagnie-des-indes.svg"
-              alt="Tasse et sous-tasse en porcelaine ancienne posées sur un fond bleu nuit"
-              title="Tasse ancienne en porcelaine — savoir-faire d'expertise"
-              className="hero__vase"
-              priority
-            />
-          </div>
+          <figure className="hero__art hero__art--small">
+            <div className="hero__photo hero__photo--wide">
+              <Photo name="sevresTasse" priority sizes="(max-width: 860px) 80vw, 320px" />
+            </div>
+            <figcaption className="hero__caption">Tasse et soucoupe, Sèvres, 1794 · The Met, CC0</figcaption>
+          </figure>
         </div>
       </section>
 

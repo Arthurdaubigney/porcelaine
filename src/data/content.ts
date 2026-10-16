@@ -1,3 +1,5 @@
+import type { PhotoKey } from "./photos";
+
 export const GUARANTEES = [
   { title: "Confidentialité totale", text: "Votre collection, votre succession, votre identité : rien n'est partagé. Discrétion absolue à chaque étape." },
   { title: "Expertise sous 24 à 48 h", text: "Un expert examine vos photos et revient vers vous rapidement avec une première estimation argumentée." },
@@ -11,11 +13,12 @@ export const STEPS = [
   { n: "03", title: "Offre de rachat", text: "Si la pièce nous intéresse, nous formulons une offre ferme. Vous acceptez ou non, sans aucune pression." },
 ] as const;
 
-export const REMARKABLE_PIECES = [
-  { title: "Vase de forme balustre, fond bleu", detail: "Style Sèvres, dorure au coquillage", image: "/art/vase-seves.svg", alt: "Vase balustre bleu nuit orné de dorures, style Sèvres", imgTitle: "Vase balustre style Sèvres expertisé" },
-  { title: "Assiette à décor floral, filet or", detail: "Limoges, fin XIXe", image: "/art/assiette-limoges.svg", alt: "Assiette de Limoges à décor floral et bordure or", imgTitle: "Assiette ancienne de Limoges expertisée" },
-  { title: "Potiche à décor de lotus", detail: "Bleu et blanc, Asie", image: "/art/potiche-asie.svg", alt: "Potiche asiatique bleu et blanc à décor de lotus", imgTitle: "Potiche asiatique expertisée" },
-] as const;
+/** Pièces de musée (CC0) pour illustrer ce que nous recherchons — voir data/photos.ts. */
+export const REFERENCE_PIECES = [
+  { photo: "sevresElephant", title: "Sèvres : fonds colorés et dorure", text: "Un fond bleu turquoise, des bouquets peints et des dorures nettes : trois critères que nous scrutons sur toute pièce de Sèvres." },
+  { photo: "sevresTasse", title: "Tasses et soucoupes anciennes", text: "Décor polychrome, filet or, marque au revers : une pièce modeste en apparence peut être très recherchée." },
+  { photo: "japonImari", title: "Porcelaines du Japon", text: "Imari, Kakiemon, Arita : les émaux et la qualité du pinceau distinguent l'ancien des productions plus tardives." },
+] as const satisfies readonly { photo: PhotoKey; title: string; text: string }[];
 
 export type Review = { name: string; place: string; text: string; placeholder?: boolean };
 
@@ -38,4 +41,30 @@ export const FAQ = [
   { q: "Comment suis-je payé si j'accepte l'offre ?", a: "Le règlement est immédiat à la remise des pièces : virement instantané, ou espèces dans la limite fixée par la réglementation en vigueur." },
   { q: "Mes informations restent-elles confidentielles ?", a: "Oui. Nous ne communiquons ni vos coordonnées, ni le contenu de votre collection, ni le montant des offres à des tiers." },
   { q: "Faut-il nettoyer mes pièces avant de les photographier ?", a: "Non, surtout pas de produit abrasif ni de lave-vaisselle. Un simple dépoussiérage délicat suffit. Le nettoyage peut altérer la dorure et la valeur." },
+] as const;
+
+export const BUY_LIST = [
+  "Services de table complets et pièces dépareillées",
+  "Assiettes, plats et soupières anciens",
+  "Théières, cafetières, tasses et sous-tasses",
+  "Vases, potiches et cache-pots",
+  "Figurines, groupes et biscuits de porcelaine",
+  "Porcelaine d'Asie : Chine, Japon, Compagnie des Indes",
+  "Services dorés, pièces armoriées, objets d'art en porcelaine",
+  "Successions, héritages et vide-maisons",
+] as const;
+
+export const VALUE_FACTORS = [
+  { title: "La manufacture et la marque", text: "Sèvres, Meissen ou Vincennes ne se valorisent pas comme une production de série. La marque identifie l'atelier, mais ne suffit jamais seule." },
+  { title: "L'époque et la rareté", text: "Une forme, un décor ou un fond de couleur peu courants font la différence. Les pièces du XVIIIe siècle et les modèles rares sont les plus demandés." },
+  { title: "L'état de conservation", text: "Éclats, fêlures, usure de la dorure et restaurations influencent fortement le prix. Un défaut signalé honnêtement n'est pas un obstacle à l'estimation." },
+  { title: "La qualité du décor", text: "Peinture à la main, signature de décorateur, dorure épaisse : la finesse d'exécution pèse autant que l'âge de la pièce." },
+  { title: "L'ensemble et la provenance", text: "Un service complet et documenté (facture, héritage, collection) vaut généralement plus que des pièces vendues séparément." },
+] as const;
+
+export const ESTIMATION_FAQ = [
+  { q: "Combien vaut ma porcelaine ancienne ?", a: "Cela dépend de la manufacture, de l'époque, de la rareté du modèle, de la qualité du décor et de l'état de conservation. Envoyez-nous des photos : l'estimation est gratuite et argumentée." },
+  { q: "Faut-il garder les boîtes, factures ou certificats ?", a: "Oui, tout document d'origine (facture, certificat, étiquette de collection, photos de famille) peut valoriser une pièce et en confirmer la provenance." },
+  { q: "Rachetez-vous un service complet en une seule fois ?", a: "Oui, et c'est même préférable : un service complet, sans éclat ni fêlure, se valorise mieux que des pièces séparées." },
+  { q: "Puis-je faire estimer une succession ou un vide-maison ?", a: "Oui. Nous intervenons régulièrement pour les successions : estimation à domicile, inventaire des pièces de porcelaine et offre de rachat en une seule visite." },
 ] as const;

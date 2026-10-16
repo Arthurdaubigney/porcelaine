@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { EstimateButton } from "./Button";
 import { Reveal } from "./Reveal";
 
@@ -17,6 +18,9 @@ export function CtaBand({
         </Reveal>
         <Reveal delay={120}>
           <EstimateButton variant="brass" label="Obtenir une expertise gratuite" />
+          <p className="band__alt">
+            Une question ? <Link href="/contact">Contact &amp; questions fréquentes</Link>
+          </p>
         </Reveal>
       </div>
     </section>

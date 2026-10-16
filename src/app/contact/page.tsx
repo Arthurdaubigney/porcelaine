@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Accordion } from "@/components/Accordion";
 import { EstimateButton } from "@/components/Button";
 import { JsonLd } from "@/components/JsonLd";
@@ -30,6 +31,7 @@ export default function ContactPage() {
 
       <section className="page-hero">
         <div className="container">
+          <Breadcrumbs trail={[{ name: "Contact & FAQ", path: "/contact" }]} />
           <p className="eyebrow">Contact</p>
           <h1 className="h1">Contacter un expert en rachat de porcelaine ancienne</h1>
           <p className="lead">Une question avant d'envoyer vos photos ? Nous vous répondons avec plaisir.</p>

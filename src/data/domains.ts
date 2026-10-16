@@ -1,10 +1,10 @@
+import type { PhotoKey } from "./photos";
+
 export type Domain = {
   slug: string;
   name: string;
   tagline: string;
-  image: string;
-  imageAlt: string;
-  imageTitle: string;
+  photo: PhotoKey;
   period: string;
   detail: string;
   marks: string;
@@ -15,9 +15,7 @@ export const DOMAINS: Domain[] = [
     slug: "sevres",
     name: "Sèvres",
     tagline: "La manufacture royale",
-    image: "/art/vase-seves.svg",
-    imageAlt: "Vase en porcelaine de Sèvres bleu profond à décor doré",
-    imageTitle: "Vase de style Sèvres, bleu nuit et or — expertise et rachat",
+    photo: "sevresVase",
     period: "Depuis 1740 (Vincennes), Sèvres depuis 1756",
     detail:
       "Fondée à Vincennes puis installée à Sèvres sous la protection de Louis XV, la manufacture produit des pièces d'exception : bleu de roi, bleu céleste, rose Pompadour, biscuits et services d'apparat. Les marques peintes, les lettres-dates et les marques de doreurs permettent de dater précisément une pièce.",
@@ -28,9 +26,7 @@ export const DOMAINS: Domain[] = [
     slug: "limoges",
     name: "Limoges",
     tagline: "Le kaolin du Limousin",
-    image: "/art/assiette-limoges.svg",
-    imageAlt: "Assiette en porcelaine de Limoges à décor floral et filet or",
-    imageTitle: "Assiette ancienne de Limoges, filet or — estimation gratuite",
+    photo: "limoges",
     period: "Depuis 1771",
     detail:
       "Depuis la découverte du kaolin à Saint-Yrieix, Limoges est devenue la capitale française de la porcelaine de table. Haviland, Bernardaud, Raynaud, Guérin-Pouyat ou Bawo & Dotter : les services complets décorés à la main sont particulièrement recherchés.",
@@ -41,9 +37,7 @@ export const DOMAINS: Domain[] = [
     slug: "meissen",
     name: "Meissen & Saxe",
     tagline: "La première porcelaine dure d'Europe",
-    image: "/art/theiere-meissen.svg",
-    imageAlt: "Théière en porcelaine de Meissen à décor de fleurs polychromes",
-    imageTitle: "Théière de Saxe type Meissen, décor floral — rachat de porcelaine",
+    photo: "meissenTheiere",
     period: "Depuis 1710",
     detail:
       "Meissen invente la porcelaine dure européenne dès 1710. Ses figurines, ses services à fleurs allemandes, ses pièces à décor chinoisant et ses fonds colorés font l'objet d'une demande internationale. Dresden regroupe aussi de nombreux ateliers de décoration, souvent confondus avec la manufacture.",
@@ -54,9 +48,7 @@ export const DOMAINS: Domain[] = [
     slug: "compagnie-des-indes",
     name: "Compagnie des Indes",
     tagline: "Porcelaine de commande, XVIIIe siècle",
-    image: "/art/tasse-compagnie-des-indes.svg",
-    imageAlt: "Tasse et sous-tasse en porcelaine de la Compagnie des Indes",
-    imageTitle: "Tasse et sous-tasse Compagnie des Indes — estimation sans engagement",
+    photo: "compagnieDesIndes",
     period: "XVIIe – XVIIIe siècles",
     detail:
       "Exportée de Chine vers l'Europe sur les navires des compagnies des Indes, cette porcelaine de commande mêle goût occidental et savoir-faire chinois : famille rose, famille verte, armoriées, bleu et blanc, décors de grisaille. Les pièces armoriées sont les plus convoitées.",
@@ -67,9 +59,7 @@ export const DOMAINS: Domain[] = [
     slug: "chine-japon",
     name: "Chine & Japon",
     tagline: "Potiches, vases et porcelaines d'Asie",
-    image: "/art/potiche-asie.svg",
-    imageAlt: "Potiche en porcelaine bleu et blanc d'Asie, décor de lotus",
-    imageTitle: "Potiche bleu et blanc de Chine, décor de lotus — expertise",
+    photo: "chineVase",
     period: "Ming, Qing, Meiji et au-delà",
     detail:
       "Bleu et blanc, famille rose, céladon, Imari, Kakiemon, Satsuma, Arita : la porcelaine d'Asie est vaste et sujette aux copies. Une marque de règne ne suffit jamais : seul l'examen de la pâte, du pied, de la couverte et du décor permet de trancher.",
@@ -80,9 +70,7 @@ export const DOMAINS: Domain[] = [
     slug: "figurines",
     name: "Figurines & biscuits",
     tagline: "Sujets, groupes et statuettes",
-    image: "/art/figurine-biscuit.svg",
-    imageAlt: "Figurine en biscuit de porcelaine, dame en robe à crinoline",
-    imageTitle: "Figurine ancienne en biscuit de porcelaine — rachat",
+    photo: "meissenFigurine",
     period: "XVIIIe – XXe siècles",
     detail:
       "Sujets galants, bergères, groupes de Saxe, biscuits de Sèvres, figurines Art déco, statuettes de Capodimonte : l'état de conservation (doigts, fleurs de dentelle, mains) pèse lourdement sur la valeur. Nous examinons chaque restauration.",
@@ -93,9 +81,7 @@ export const DOMAINS: Domain[] = [
     slug: "services-de-table",
     name: "Services de table",
     tagline: "Services complets et pièces d'apparat",
-    image: "/art/soupiere-service.svg",
-    imageAlt: "Soupière en porcelaine blanche et or d'un service de table ancien",
-    imageTitle: "Soupière d'un service de table ancien — estimation de vaisselle",
+    photo: "meissenSoupiere",
     period: "XIXe – XXe siècles",
     detail:
       "Services de 12 couverts, soupières, plats, assiettes à dessert, services à thé et à café, services de mariage : un ensemble complet, documenté et sans éclat, se valorise bien mieux que des pièces dispersées. Ne les séparez pas avant l'estimation.",

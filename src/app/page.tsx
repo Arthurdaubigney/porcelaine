@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { Art } from "@/components/Art";
+import { Photo } from "@/components/Photo";
 import { EstimateButton, Button } from "@/components/Button";
 import { CtaBand } from "@/components/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { DOMAINS } from "@/data/domains";
-import { GUARANTEES, REMARKABLE_PIECES, REVIEWS, STEPS } from "@/data/content";
+import { PHOTOS } from "@/data/photos";
+import { BUY_LIST, GUARANTEES, REFERENCE_PIECES, REVIEWS, STEPS } from "@/data/content";
 import { pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -24,14 +25,39 @@ export default function HomePage() {
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          name: SITE.name,
-          url: SITE.url,
-          description: "Estimation, expertise et rachat de porcelaine ancienne et d'objets d'art en porcelaine.",
-          email: SITE.email,
-          telephone: SITE.phoneHref,
-          areaServed: "FR",
-          priceRange: "Estimation gratuite",
+          "@graph": [
+            {
+              "@type": "ProfessionalService",
+              "@id": `${SITE.url}/#organisation`,
+              name: SITE.name,
+              url: SITE.url,
+              logo: `${SITE.url}/logo.png`,
+              image: `${SITE.url}/opengraph-image.png`,
+              description:
+                "Estimation, expertise et rachat de porcelaine ancienne, de vaisselle de collection et d'objets d'art en porcelaine.",
+              email: SITE.email,
+              telephone: SITE.phoneHref,
+              areaServed: { "@type": "Country", name: "France" },
+              priceRange: "Estimation gratuite",
+              knowsAbout: DOMAINS.map((d) => d.name),
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Porcelaine ancienne rachetée",
+                itemListElement: DOMAINS.map((d) => ({
+                  "@type": "Offer",
+                  itemOffered: { "@type": "Service", name: `Estimation et rachat de porcelaine ${d.name}` },
+                })),
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${SITE.url}/#website`,
+              url: SITE.url,
+              name: SITE.name,
+              inLanguage: "fr-FR",
+              publisher: { "@id": `${SITE.url}/#organisation` },
+            },
+          ],
         }}
       />
 
@@ -59,18 +85,12 @@ export default function HomePage() {
               <li>Paiement immédiat</li>
             </ul>
           </div>
-          <div className="hero__art">
-            <div className="hero__panel">
-              <Art
-                src="/art/vase-seves.svg"
-                alt="Vase en porcelaine bleu de Sèvres à décor doré, pièce de collection à faire estimer"
-                title="Vase de style Sèvres — estimation et rachat de porcelaine ancienne"
-                priority
-                className="hero__vase"
-              />
-              <p className="hero__caption">Vase balustre, fond bleu, dorure · style Sèvres</p>
+          <figure className="hero__art">
+            <div className="hero__photo">
+              <Photo name="sevresVase" priority sizes="(max-width: 860px) 70vw, 420px" />
             </div>
-          </div>
+            <figcaption className="hero__caption">{PHOTOS.sevresVase.caption} · The Met, CC0</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -106,7 +126,7 @@ export default function HomePage() {
               <Reveal as="li" key={d.slug} delay={(i % 4) * 60} className="domain">
                 <Link href={`/expertises#${d.slug}`} className="domain__link">
                   <span className="domain__img">
-                    <Art src={d.image} alt={d.imageAlt} title={d.imageTitle} />
+                    <Photo name={d.photo} sizes="(max-width: 640px) 46vw, (max-width: 960px) 30vw, 280px" />
                   </span>
                   <span className="domain__name">{d.name}</span>
                   <span className="domain__tag">{d.tagline}</span>
@@ -114,6 +134,25 @@ export default function HomePage() {
               </Reveal>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="section section--tone" aria-labelledby="rachat-title">
+        <div className="container prose-grid">
+          <Reveal>
+            <p className="eyebrow">Ce que nous rachetons</p>
+            <h2 id="rachat-title" className="h2">Rachat de porcelaine ancienne, de la pièce isolée au service complet</h2>
+          </Reveal>
+          <Reveal delay={80}>
+            <ul className="buylist">
+              {BUY_LIST.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p className="buylist__note">
+              Partout en France, à distance par photos ou à domicile pour les collections importantes.
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -141,17 +180,21 @@ export default function HomePage() {
       <section className="section" aria-labelledby="realisations-title">
         <div className="container">
           <Reveal className="section__head">
-            <p className="eyebrow">Réalisations</p>
-            <h2 id="realisations-title" className="h2">Pièces remarquables expertisées</h2>
+            <p className="eyebrow">Pièces de référence</p>
+            <h2 id="realisations-title" className="h2">Ce que notre œil cherche sur une porcelaine ancienne</h2>
+            <p className="lead">Trois pièces de musée, présentées à titre d'illustration, pour comprendre les critères de l'expertise.</p>
           </Reveal>
           <ul className="pieces">
-            {REMARKABLE_PIECES.map((p, i) => (
+            {REFERENCE_PIECES.map((p, i) => (
               <Reveal as="li" key={p.title} delay={i * 80} className="piece">
-                <span className="piece__img">
-                  <Art src={p.image} alt={p.alt} title={p.imgTitle} />
-                </span>
+                <figure>
+                  <span className="piece__img">
+                    <Photo name={p.photo} sizes="(max-width: 860px) 90vw, 380px" />
+                  </span>
+                  <figcaption>{PHOTOS[p.photo].caption} · The Met, CC0</figcaption>
+                </figure>
                 <h3 className="h3">{p.title}</h3>
-                <p>{p.detail}</p>
+                <p>{p.text}</p>
               </Reveal>
             ))}
           </ul>

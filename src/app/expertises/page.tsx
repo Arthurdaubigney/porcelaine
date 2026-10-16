@@ -1,8 +1,10 @@
-import { Art } from "@/components/Art";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Photo } from "@/components/Photo";
 import { EstimateButton } from "@/components/Button";
 import { CtaBand } from "@/components/CtaBand";
 import { Reveal } from "@/components/Reveal";
 import { DOMAINS } from "@/data/domains";
+import { PHOTOS } from "@/data/photos";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -24,8 +26,9 @@ export default function ExpertisesPage() {
     <>
       <section className="page-hero">
         <div className="container">
+          <Breadcrumbs trail={[{ name: "Nos expertises", path: "/expertises" }]} />
           <p className="eyebrow">Nos expertises</p>
-          <h1 className="h1">Expertise de porcelaine ancienne : Sèvres, Limoges, Meissen et au-delà</h1>
+          <h1 className="h1">Expertise de porcelaine ancienne : Sèvres, Limoges, Meissen et au-delà</h1>
           <p className="lead">
             Chaque manufacture a son histoire, ses pâtes, ses décors et ses marques. Voici les grandes familles que
             nous examinons et rachetons, ainsi que les repères pour lire une estampille.
@@ -41,9 +44,10 @@ export default function ExpertisesPage() {
             {DOMAINS.map((d, i) => (
               <Reveal as="article" key={d.slug} className={`manufacture${i % 2 ? " manufacture--flip" : ""}`}>
                 <div id={d.slug} className="manufacture__anchor" />
-                <div className="manufacture__img">
-                  <Art src={d.image} alt={d.imageAlt} title={d.imageTitle} />
-                </div>
+                <figure className="manufacture__img">
+                  <Photo name={d.photo} sizes="(max-width: 860px) 90vw, 440px" />
+                  <figcaption>{PHOTOS[d.photo].caption} · The Met, CC0</figcaption>
+                </figure>
                 <div className="manufacture__body">
                   <p className="eyebrow">{d.period}</p>
                   <h3 className="h2 manufacture__title">{d.name}</h3>
