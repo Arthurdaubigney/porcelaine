@@ -26,11 +26,9 @@ export function Footer() {
           </ul>
         </nav>
         <div>
-          <p className="footer__title">Contact</p>
+          <p className="footer__title">Nous joindre</p>
           <ul>
-            <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
-            <li><a href={`tel:${SITE.phoneHref}`}>{SITE.phone}</a></li>
-            <li>{SITE.hours}</li>
+            <li><Link href={ESTIMATION_HREF}>Formulaire d'estimation en ligne</Link></li>
             <li>{SITE.area}</li>
           </ul>
         </div>

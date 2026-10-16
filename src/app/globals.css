@@ -270,7 +270,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif-stack); font-weight: 5
 .tally__placeholder code { background: var(--cream-2); padding: .1rem .4rem; font-size: .88em; }
 
 /* ----- Contact & FAQ ----- */
-.contact { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.25rem, 3vw, 3rem); margin: 0; }
+.contact { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 3vw, 3rem); margin: 0; }
 .contact__item { border-top: 1px solid var(--ink); padding-top: 1.2rem; }
 .contact dt { font-size: .78rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass-ink); margin-bottom: .6rem; }
 .contact dd { margin: 0; font-family: var(--font-serif-stack); font-size: 1.5rem; line-height: 1.25; }

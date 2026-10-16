@@ -20,7 +20,7 @@ type TallyFormProps = {
 /**
  * Emplacement du formulaire d'estimation Tally.
  * - Avec un ID : embed responsive (hauteur dynamique, fond transparent).
- * - Sans ID : placeholder propre, avec repli e-mail/téléphone.
+ * - Sans ID : placeholder propre.
  */
 export function TallyForm({ formId = SITE.tallyFormId, minHeight = 560 }: TallyFormProps) {
   const id = formId.trim();
@@ -65,10 +65,6 @@ export function TallyForm({ formId = SITE.tallyFormId, minHeight = 560 }: TallyF
             <p className="tally__ph-title">Le formulaire Tally s'affichera ici</p>
             <p>
               Renseignez <code>NEXT_PUBLIC_TALLY_FORM_ID</code> (ou la prop <code>formId</code>) pour activer l'embed.
-            </p>
-            <p>
-              En attendant, écrivez-nous à <a href={`mailto:${SITE.email}`}>{SITE.email}</a> ou appelez le{" "}
-              <a href={`tel:${SITE.phoneHref}`}>{SITE.phone}</a>.
             </p>
           </div>
         )}

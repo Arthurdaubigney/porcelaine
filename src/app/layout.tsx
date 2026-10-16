@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Estimation gratuite et rachat de porcelaine ancienne et d'objets d'art : Sèvres, Limoges, Meissen. Expertise argumentée, sans engagement.",
   applicationName: SITE.name,
   robots: { index: true, follow: true },
-  formatDetection: { telephone: true, email: true },
+  formatDetection: { telephone: false, email: false, address: false },
 };
 
 export const viewport: Viewport = {
