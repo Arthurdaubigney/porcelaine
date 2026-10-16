@@ -2,7 +2,7 @@ import type { PhotoKey } from "./photos";
 
 export const GUARANTEES = [
   { title: "Confidentialité totale", text: "Votre collection, votre succession, votre identité : rien n'est partagé. Discrétion absolue à chaque étape." },
-  { title: "Expertise sous 24 à 48 h", text: "Un expert examine vos photos et revient vers vous rapidement avec une première estimation argumentée." },
+  { title: "Estimation argumentée", text: "Un expert examine vos photos et vous remet une estimation expliquée : manufacture, époque, état et demande du marché." },
   { title: "Déplacement possible", text: "Pour les collections importantes ou fragiles, nous nous déplaçons à votre domicile, sans frais." },
   { title: "Paiement immédiat", text: "Si vous acceptez notre offre : règlement comptant, par virement ou en espèces dans le cadre légal." },
 ] as const;
@@ -35,7 +35,7 @@ export const REVIEWS: Review[] = [
 export const FAQ = [
   { q: "L'estimation de ma porcelaine est-elle vraiment gratuite ?", a: "Oui. L'estimation est gratuite et sans engagement. Vous n'avez aucune obligation de vendre, que l'offre vous convienne ou non." },
   { q: "Quelles photos dois-je envoyer ?", a: "Une vue d'ensemble, une vue de dessous avec la marque ou l'estampille, un gros plan du décor et de chaque défaut visible (éclat, fêlure, restauration). Une lumière naturelle et un fond uni aident beaucoup." },
-  { q: "Combien de temps pour recevoir une réponse ?", a: "Dans la majorité des cas, sous 24 à 48 heures ouvrées après réception de votre demande complète." },
+  { q: "Que se passe-t-il après l'envoi de ma demande ?", a: "Un expert examine vos photos et vous répond avec une estimation argumentée. Des photos nettes (ensemble, dessous, décor, défauts) permettent un examen plus précis." },
   { q: "Pouvez-vous vous déplacer chez moi ?", a: "Oui, pour les collections importantes, les successions ou les pièces fragiles et volumineuses. Le déplacement est gratuit et sans engagement." },
   { q: "Rachetez-vous aussi les pièces ébréchées ou restaurées ?", a: "Certaines oui, selon la rareté de la pièce et l'ampleur de l'altération. Indiquez les défauts honnêtement : cela accélère l'expertise." },
   { q: "Comment suis-je payé si j'accepte l'offre ?", a: "Le règlement est immédiat à la remise des pièces : virement instantané, ou espèces dans la limite fixée par la réglementation en vigueur." },

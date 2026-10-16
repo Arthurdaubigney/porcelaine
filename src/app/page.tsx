@@ -13,7 +13,7 @@ import { SITE } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Rachat & Estimation de Porcelaine Ancienne – Gratuit",
   description:
-    "Faites estimer gratuitement votre porcelaine ancienne : Sèvres, Limoges, Meissen. Expertise sous 24-48 h, déplacement possible, paiement immédiat.",
+    "Faites estimer gratuitement votre porcelaine ancienne : Sèvres, Limoges, Meissen. Expertise argumentée, déplacement possible, paiement immédiat.",
   path: "/",
 });
 
@@ -73,7 +73,7 @@ export default function HomePage() {
             </h1>
             <p className="lead hero__lead">
               Sèvres, Limoges, Meissen, Compagnie des Indes : un expert examine vos pièces, vous remet une estimation
-              honnête sous 24 à 48 h et, si elles nous intéressent, vous propose un rachat réglé immédiatement.
+              honnête et argumentée et, si elles nous intéressent, vous propose un rachat réglé immédiatement.
             </p>
             <div className="actions">
               <EstimateButton />

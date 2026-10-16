@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Estimation & Rachat de Porcelaine Ancienne Gratuit",
   description:
-    "Demandez une estimation gratuite et sans engagement de votre porcelaine ancienne. Envoyez vos photos : réponse d'un expert en 24-48 h, rachat immédiat.",
+    "Demandez une estimation gratuite et sans engagement de votre porcelaine ancienne. Envoyez vos photos : expertise argumentée et offre de rachat.",
   path: "/estimation",
 });
 
@@ -29,7 +29,7 @@ export default function EstimationPage() {
           <p className="eyebrow">Rachat &amp; estimation</p>
           <h1 className="h1">Estimer et vendre sa porcelaine ancienne, sans engagement</h1>
           <p className="lead">
-            Une demande, quelques photos, une réponse argumentée sous 24 à 48 h. Vous décidez ensuite, librement.
+            Une demande, quelques photos, une réponse argumentée. Vous décidez ensuite, librement.
           </p>
           <div className="actions"><EstimateButton label="Remplir le formulaire" /></div>
         </div>

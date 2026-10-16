@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function CtaBand({
   title = "Une pièce à faire estimer ?",
-  text = "Envoyez-nous vos photos : expertise gratuite, réponse sous 24 à 48 h, aucune obligation de vendre.",
+  text = "Envoyez-nous vos photos : expertise gratuite, estimation argumentée, aucune obligation de vendre.",
 }: {
   title?: string;
   text?: string;

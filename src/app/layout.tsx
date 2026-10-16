@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description:
-    "Estimation gratuite et rachat de porcelaine ancienne, vaisselle de collection et objets d'art : Sèvres, Limoges, Meissen. Réponse sous 24 à 48 h.",
+    "Estimation gratuite et rachat de porcelaine ancienne et d'objets d'art : Sèvres, Limoges, Meissen. Expertise argumentée, sans engagement.",
   applicationName: SITE.name,
   robots: { index: true, follow: true },
   formatDetection: { telephone: true, email: true },

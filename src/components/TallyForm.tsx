@@ -35,7 +35,7 @@ export function TallyForm({ formId = SITE.tallyFormId, minHeight = 560 }: TallyF
         <p className="eyebrow">Formulaire d'estimation</p>
         <h2 id="formulaire-titre" className="h2">Obtenir une expertise gratuite</h2>
         <p className="lead">
-          Décrivez votre pièce et joignez vos photos. Réponse d'un expert sous 24 à 48 h, sans engagement.
+          Décrivez votre pièce et joignez vos photos. Un expert l'examine et vous répond, sans engagement de votre part.
         </p>
       </div>
 

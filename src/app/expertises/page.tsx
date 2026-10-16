@@ -101,7 +101,7 @@ export default function ExpertisesPage() {
         </div>
       </section>
 
-      <CtaBand title="Vous avez repéré une marque ?" text="Envoyez-nous une photo du dessous et du décor : un expert identifie la pièce et vous répond sous 24 à 48 h." />
+      <CtaBand title="Vous avez repéré une marque ?" text="Envoyez-nous une photo du dessous et du décor : un expert identifie la pièce et vous répond, sans engagement." />
     </>
   );
 }
