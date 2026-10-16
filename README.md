@@ -17,7 +17,7 @@ npm run build && npm start
 
 ## À personnaliser avant la mise en ligne
 
-- `src/lib/site.ts` : nom, e-mail, téléphone, horaires, zone (valeurs provisoires).
+- `src/lib/site.ts` : nom et zone d'intervention (valeurs provisoires). Aucun téléphone ni e-mail n'est publié : le contact passe par le formulaire Tally.
 - `.env.local` : `NEXT_PUBLIC_TALLY_FORM_ID` (ex. `https://tally.so/r/abc123` → `abc123`).
 - `src/data/content.ts` : les avis marqués `placeholder` ne s'affichent jamais en production ; remplacez-les par de vrais avis.
 - `src/app/a-propos/page.tsx` : histoire réelle de la maison.

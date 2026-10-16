@@ -35,8 +35,6 @@ export default function HomePage() {
               image: `${SITE.url}/opengraph-image.png`,
               description:
                 "Estimation, expertise et rachat de porcelaine ancienne, de vaisselle de collection et d'objets d'art en porcelaine.",
-              email: SITE.email,
-              telephone: SITE.phoneHref,
               areaServed: { "@type": "Country", name: "France" },
               priceRange: "Estimation gratuite",
               knowsAbout: DOMAINS.map((d) => d.name),

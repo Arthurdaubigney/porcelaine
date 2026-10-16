@@ -7,18 +7,14 @@ const SITE_URL = (
 
 /**
  * Informations de l'entreprise — à adapter avant la mise en ligne.
- * Toutes les coordonnées ci-dessous sont des valeurs provisoires.
+ * Aucune coordonnée directe (téléphone, e-mail) n'est publiée : le contact passe par le formulaire.
  */
 export const SITE = {
   name: "Maison Porcelaine",
   legalName: "Maison Porcelaine — Expertise & Rachat",
   url: SITE_URL,
   locale: "fr_FR",
-  email: "contact@example.com",
-  phone: "01 00 00 00 00",
-  phoneHref: "+33100000000",
   address: "Paris, France",
-  hours: "Du lundi au samedi, 9h – 19h",
   area: "Toute la France, déplacement possible à domicile",
   tallyFormId: process.env.NEXT_PUBLIC_TALLY_FORM_ID ?? "",
 } as const;
