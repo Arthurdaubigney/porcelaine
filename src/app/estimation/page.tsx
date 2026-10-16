@@ -1,7 +1,9 @@
+import { Accordion } from "@/components/Accordion";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EstimateButton } from "@/components/Button";
 import { Reveal } from "@/components/Reveal";
 import { TallyForm } from "@/components/TallyForm";
-import { GUARANTEES, STEPS } from "@/data/content";
+import { ESTIMATION_FAQ, GUARANTEES, STEPS, VALUE_FACTORS } from "@/data/content";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -23,6 +25,7 @@ export default function EstimationPage() {
     <>
       <section className="page-hero">
         <div className="container">
+          <Breadcrumbs trail={[{ name: "Rachat & estimation", path: "/estimation" }]} />
           <p className="eyebrow">Rachat &amp; estimation</p>
           <h1 className="h1">Estimer et vendre sa porcelaine ancienne, sans engagement</h1>
           <p className="lead">
@@ -75,9 +78,44 @@ export default function EstimationPage() {
         </div>
       </section>
 
+      <section className="section" aria-labelledby="valeur-title">
+        <div className="container">
+          <Reveal className="section__head">
+            <p className="eyebrow">Valeur d'une porcelaine</p>
+            <h2 id="valeur-title" className="h2">Combien vaut une porcelaine ancienne ? Les cinq critères de l'expertise</h2>
+          </Reveal>
+          <ul className="tips tips--five">
+            {VALUE_FACTORS.map((f, i) => (
+              <Reveal as="li" key={f.title} delay={i * 60} className="tip">
+                <h3 className="h3">{f.title}</h3>
+                <p>{f.text}</p>
+              </Reveal>
+            ))}
+          </ul>
+          <Reveal className="succession">
+            <h3 className="h3">Succession, héritage, vide-maison</h3>
+            <p>
+              Vous héritez d'un service ou d'une collection de porcelaine ? Nous estimons l'ensemble, à distance ou à
+              domicile, et vous remettons un inventaire clair des pièces, avec une offre de rachat si elles nous
+              intéressent. Notaires et familles peuvent nous contacter en toute confidentialité.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="section section--form">
         <div className="container container--narrow">
           <TallyForm />
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="questions-title">
+        <div className="container container--narrow">
+          <Reveal className="section__head">
+            <p className="eyebrow">Questions fréquentes</p>
+            <h2 id="questions-title" className="h2">Estimation de porcelaine : vos questions</h2>
+          </Reveal>
+          <Accordion items={ESTIMATION_FAQ} />
         </div>
       </section>
     </>

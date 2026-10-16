@@ -30,5 +30,7 @@ export const NAV = [
   { href: "/expertises", label: "Nos expertises" },
   { href: "/estimation", label: "Rachat & estimation" },
   { href: "/a-propos", label: "À propos" },
-  { href: "/contact", label: "Contact" },
 ] as const;
+
+/** Le pied de page garde l'accès au contact, absent du menu principal (le CTA d'estimation y suffit). */
+export const FOOTER_NAV = [...NAV, { href: "/contact", label: "Contact & FAQ" }] as const;
