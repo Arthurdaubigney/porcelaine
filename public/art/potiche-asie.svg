@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+  <defs>
+    <linearGradient id="w" x1="0" x2="1"><stop offset="0" stop-color="#e6dfcd"/><stop offset=".35" stop-color="#ffffff"/><stop offset="1" stop-color="#ddd5c0"/></linearGradient>
+  </defs>
+  <ellipse cx="200" cy="468" rx="100" ry="10" fill="#0f172a" opacity=".16"/>
+  <path d="M130 120c-6-14 4-28 16-28h108c12 0 22 14 16 28h-20c-4 18-2 28 18 50 36 40 52 80 46 130-6 52-34 102-80 128-8 6-20 10-30 10s-22-4-30-10c-46-26-74-76-80-128-6-50 10-90 46-130 20-22 22-32 18-50z" fill="url(#w)" stroke="#cfc6ae" stroke-width="2"/>
+  <ellipse cx="200" cy="98" rx="56" ry="10" fill="#1A2B4C"/>
+  <g stroke="#1A2B4C" stroke-width="3.2" stroke-linecap="round" fill="none">
+    <path d="M118 262c40 14 124 14 164 0"/>
+    <path d="M128 178c34 8 110 8 144 0"/>
+    <path d="M200 330c-30-20-52-6-54 12 18-4 30 4 54 8M200 330c30-20 52-6 54 12-18-4-30 4-54 8"/>
+    <path d="M200 310c0-22 6-42 0-64" />
+    <path d="M168 232c-14-10-34 0-34 14 14-4 24 2 38 6M232 232c14-10 34 0 34 14-14-4-24 2-38 6"/>
+    <path d="M164 400c14 10 58 10 72 0"/>
+    <path d="M150 372c8-10 16-14 24-14M250 372c-8-10-16-14-24-14"/>
+  </g>
+  <g fill="#1A2B4C" opacity=".85"><circle cx="200" cy="210" r="7"/><circle cx="156" cy="210" r="3.5"/><circle cx="244" cy="210" r="3.5"/></g>
+</svg>
