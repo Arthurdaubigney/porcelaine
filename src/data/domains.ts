@@ -88,4 +88,15 @@ export const DOMAINS: Domain[] = [
     marks:
       "Marques de manufacture, marques de revendeurs (orfèvres, maisons de la place Vendôme), numéros de série de décor.",
   },
+  {
+    slug: "porcelaine-anglaise",
+    name: "Porcelaine anglaise",
+    tagline: "Worcester, Derby, Minton, Spode",
+    photo: "angleterreMinton",
+    period: "Depuis 1751 (Worcester)",
+    detail:
+      "Worcester (fondée en 1751), Derby, Minton, Spode ou Royal Crown Derby : l'Angleterre a développé la pâte tendre, puis la porcelaine « bone china ». Services à thé, vases à fonds colorés, groupes en biscuit et pièces décorées à la main se vendent très bien lorsque la marque et le décor sont identifiables.",
+    marks:
+      "Marques imprimées ou peintes au revers (nom de la manufacture, couronne, croissant pour Worcester), numéros de modèle, et cachets de date en creux chez Minton. Plusieurs maisons ont changé de nom : la marque aide à situer la période.",
+  },
 ];

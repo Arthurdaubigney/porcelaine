@@ -77,8 +77,7 @@ export default function ExpertisesPage() {
               est indispensable.
             </p>
             <p>
-              Nous examinons aussi Paris, Bayeux, Niderviller, Capodimonte, Herend, Royal Copenhagen et les grandes
-              maisons anglaises. Si votre pièce n'est pas citée ici, envoyez-nous une photo.
+              Nous examinons aussi Paris, Bayeux, Niderviller, Capodimonte, Herend, Royal Copenhagen et bien d'autres. Si votre pièce n'est pas citée ici, envoyez-nous une photo.
             </p>
           </Reveal>
         </div>
