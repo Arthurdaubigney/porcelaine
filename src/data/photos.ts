@@ -80,6 +80,13 @@ export const PHOTOS = {
     caption: "Petit vase, Chine, fin du XVIIIe siècle",
     source: MET(460677),
   },
+  angleterreMinton: {
+    src: "/photos/angleterre-minton.webp", width: 1120, height: 1400,
+    alt: "Vase en porcelaine anglaise de Minton, fond rose, anses et col dorés, décor de branches fleuries émaillées",
+    title: "Vase de Minton, après 1872 — porcelaine anglaise ancienne",
+    caption: "Vase à décor de branche fleurie, Minton (Angleterre), après 1872",
+    source: MET(771070),
+  },
   japonImari: {
     src: "/photos/japon-imari.webp", width: 1400, height: 1049,
     alt: "Assiette japonaise de type Imari à vase de fleurs, émaux polychromes et dorures, vers 1770",
