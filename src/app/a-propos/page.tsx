@@ -50,16 +50,17 @@ export default function AboutPage() {
           <Reveal delay={80}>
             <p>
               Tout commence par le goût de la matière : la blancheur d'une pâte dure, la profondeur d'un bleu sous
-              couverte, la finesse d'une dorure. Au fil des ans, cette passion est devenue un savoir-faire :
-              reconnaître les marques, lire les décors, distinguer l'original de l'hommage.
+              couverte, la finesse d'une dorure. Cette passion est devenue un savoir-faire : reconnaître les marques,
+              lire les décors, distinguer l'original de l'hommage.
             </p>
             <p>
-              Aujourd'hui, nous accompagnons particuliers, familles et notaires dans l'estimation et la vente de
-              collections de porcelaine, de la tasse isolée au service complet.
+              Notre expertise s'est construite au contact des pièces : manufactures françaises, saxonnes, anglaises
+              et asiatiques, estampilles, techniques de décor, restaurations. Chaque objet est examiné avec soin, à
+              partir de vos photos, puis estimé avec franchise.
             </p>
-            <p className="note">
-              <strong>À compléter :</strong> ajoutez ici l'histoire réelle de votre maison (fondateur, parcours,
-              formations, affiliations professionnelles).
+            <p>
+              Aujourd'hui, nous accompagnons particuliers et familles dans l'estimation et la vente de collections de
+              porcelaine, de la tasse isolée au service complet.
             </p>
           </Reveal>
         </div>
