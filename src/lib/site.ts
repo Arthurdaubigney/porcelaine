@@ -19,6 +19,23 @@ export const SITE = {
   tallyFormId: process.env.NEXT_PUBLIC_TALLY_FORM_ID || "dbWb8A",
 } as const;
 
+/** Éditeur du site (registre Insee / RNE) — utilisé par la page « Mentions légales ». */
+export const LEGAL = {
+  owner: "François SECULA",
+  status: "Entrepreneur individuel",
+  siren: "529 601 486",
+  siret: "529 601 486 00010",
+  vat: "FR51529601486",
+  activity: "Autres commerces de détail sur éventaires et marchés",
+  createdAt: "20 janvier 2011",
+  address: "21 rue du Docteur Tassin, 21200 Beaune, France",
+  host: {
+    name: "Vercel Inc.",
+    address: "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
+    url: "https://vercel.com",
+  },
+} as const;
+
 export const ESTIMATION_HREF = "/estimation#formulaire";
 
 export const NAV = [

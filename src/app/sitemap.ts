@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/expertises", 0.8],
     ["/a-propos", 0.6],
     ["/contact", 0.6],
+    ["/mentions-legales", 0.2],
   ];
   return pages.map(([path, priority]) => ({
     url: `${SITE.url}${path}`,
