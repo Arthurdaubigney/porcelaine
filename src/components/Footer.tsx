@@ -34,7 +34,10 @@ export function Footer() {
         </div>
       </div>
       <div className="container footer__legal">
-        <p>© {new Date().getFullYear()} {SITE.name}. Estimation gratuite, sans engagement.</p>
+        <p>
+          © {new Date().getFullYear()} {SITE.name}. Estimation gratuite, sans engagement.{" "}
+          <Link href="/mentions-legales">Mentions légales</Link>
+        </p>
         <p>Confidentialité garantie · Paiement immédiat</p>
         <p className="footer__credit">
           Photographies : pièces de musée du{" "}
