@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { SITE } from "@/lib/site";
 
@@ -24,6 +25,21 @@ type TallyFormProps = {
  */
 export function TallyForm({ formId = SITE.tallyFormId, minHeight = 560 }: TallyFormProps) {
   const id = formId.trim();
+  const router = useRouter();
+
+  // Tally prévient la page parente à l'envoi : on redirige vers /merci.
+  useEffect(() => {
+    const onMessage = (e: MessageEvent) => {
+      if (e.origin !== "https://tally.so" || typeof e.data !== "string") return;
+      try {
+        if (JSON.parse(e.data).event === "Tally.FormSubmitted") router.push("/merci");
+      } catch {
+        /* message d'un autre type : ignoré */
+      }
+    };
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, [router]);
 
   useEffect(() => {
     if (id && window.Tally) window.Tally.loadEmbeds();
