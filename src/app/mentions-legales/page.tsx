@@ -45,6 +45,8 @@ export default function LegalPage() {
             <dd>{LEGAL.activity}</dd>
             <dt>Création</dt>
             <dd>{LEGAL.createdAt}</dd>
+            <dt>E-mail</dt>
+            <dd><a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a></dd>
             <dt>Contact</dt>
             <dd><Link href={ESTIMATION_HREF}>Formulaire d'estimation en ligne</Link></dd>
           </dl>
@@ -91,7 +93,8 @@ export default function LegalPage() {
           <p>
             Conformément au règlement (UE) 2016/679 (RGPD) et à la loi « Informatique et Libertés », vous disposez d'un
             droit d'accès, de rectification, d'effacement, d'opposition et de limitation du traitement de vos données.
-            Pour l'exercer, contactez l'éditeur via le{" "}
+            Pour l'exercer, contactez l'éditeur par e-mail à{" "}
+            <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a> ou via le{" "}
             <Link href={ESTIMATION_HREF}>formulaire en ligne</Link>. Vous pouvez également saisir la CNIL (
             <a href="https://www.cnil.fr" rel="noopener noreferrer" target="_blank">cnil.fr</a>).
           </p>

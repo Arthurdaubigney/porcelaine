@@ -29,6 +29,7 @@ export const LEGAL = {
   activity: "Autres commerces de détail sur éventaires et marchés",
   createdAt: "20 janvier 2011",
   address: "21 rue du Docteur Tassin, 21200 Beaune, France",
+  email: "francoisseculapub@gmail.com",
   host: {
     name: "Vercel Inc.",
     address: "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
