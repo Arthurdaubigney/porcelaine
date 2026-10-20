@@ -349,3 +349,11 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif-stack); font-weight: 5
   *, *::before, *::after { transition-duration: 1ms !important; animation-duration: 1ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ----- Page de remerciement ----- */
+.thanks { min-height: 60vh; border-bottom: 0; }
+.thanks .h1 { max-width: 20ch; }
+.thanks__notice { max-width: 40rem; margin-top: 2.4rem; padding: 1.6rem 1.8rem; background: var(--cream-2); border-left: 2px solid var(--brass); border-radius: var(--radius); }
+.thanks__notice .h3 { margin-bottom: .5rem; }
+.thanks__notice p { color: var(--ink-soft); margin: 0 0 .7rem; }
+.thanks__notice p:last-child { margin-bottom: 0; }
