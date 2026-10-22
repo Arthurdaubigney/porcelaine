@@ -59,7 +59,7 @@ export default function HomePage() {
         }}
       />
 
-      <section className="hero" aria-labelledby="hero-title">
+      <section className="hero hero--home" aria-labelledby="hero-title">
         <div className="container hero__grid hero__grid--portrait">
           <div className="hero__copy">
             <p className="badge">
