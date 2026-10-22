@@ -93,30 +93,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--navy priority" aria-labelledby="priorite-title">
-        <div className="container prose-grid">
-          <Reveal>
-            <p className="eyebrow eyebrow--light">Notre priorité</p>
-            <h2 id="priorite-title" className="h2">Nous recherchons avant tout des services de vaisselle en porcelaine</h2>
-            <p className="priority__lead">
-              Le service de votre grand-mère, un héritage, un buffet que l'on vide : si vous avez un service complet,
-              même ordinaire en apparence, il nous intéresse. Photographiez l'ensemble et envoyez-le nous.
-            </p>
-            <EstimateButton variant="brass" label="Faire estimer mon service" />
-          </Reveal>
-          <Reveal delay={80}>
-            <ul className="priority__list">
-              {PRIORITY_SERVICES.map((item) => (
-                <li key={item.title}>
-                  <h3 className="h3">{item.title}</h3>
-                  <p>{item.text}</p>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        </div>
-      </section>
-
       <section className="section section--tone" aria-labelledby="garanties-title">
         <div className="container">
           <Reveal className="section__head">
@@ -157,6 +133,32 @@ export default function HomePage() {
               </Reveal>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="section section--navy priority" aria-labelledby="priorite-title">
+        <div className="container priority__grid">
+          <Reveal>
+            <p className="eyebrow eyebrow--light">Notre priorité</p>
+            <h2 id="priorite-title" className="h2">Nous recherchons avant tout des services de vaisselle en porcelaine</h2>
+            <p className="priority__lead">
+              Le service de votre grand-mère, un héritage, un buffet que l'on vide : si vous avez un service complet,
+              même ordinaire en apparence, il nous intéresse. Photographiez l'ensemble et envoyez-le nous.
+            </p>
+            <ul className="priority__list">
+              {PRIORITY_SERVICES.map((item) => (
+                <li key={item.title}>
+                  <h3 className="h3">{item.title}</h3>
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+            <EstimateButton variant="brass" label="Faire estimer mon service" />
+          </Reveal>
+          <Reveal as="figure" delay={80} className="priority__photo">
+            <Photo name="serviceTableBleu" sizes="(max-width: 860px) 92vw, 560px" />
+            <figcaption>{PHOTOS.serviceTableBleu.caption}{creditOf("serviceTableBleu")}</figcaption>
+          </Reveal>
         </div>
       </section>
 

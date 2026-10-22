@@ -363,8 +363,14 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif-stack); font-weight: 5
 .thanks__notice p:last-child { margin-bottom: 0; }
 
 /* ----- Section « Notre priorité » ----- */
-.priority .prose-grid p { color: rgba(250, 249, 245, .82); }
-.priority__lead { max-width: 34rem; font-size: 1.1rem; margin: 1.2rem 0 1.8rem; }
+.priority__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.priority__grid p { color: rgba(250, 249, 245, .82); }
+.priority__photo { margin: 0; }
+.priority__photo img { width: 100%; height: auto; border: 10px solid var(--cream-2); border-radius: var(--radius); }
+.priority__photo figcaption { margin-top: .8rem; font-size: .8rem; color: rgba(250, 249, 245, .7); }
+.priority .btn { margin-top: 2rem; }
+@media (max-width: 860px) { .priority__grid { grid-template-columns: 1fr; } }
+.priority__lead { max-width: 34rem; font-size: 1.1rem; margin: 1.2rem 0 1.6rem; }
 .priority__list li { padding: 1.3rem 0; border-top: 1px solid rgba(250, 249, 245, .22); }
 .priority__list li:last-child { border-bottom: 1px solid rgba(250, 249, 245, .22); }
 .priority__list .h3 { color: var(--cream); margin-bottom: .4rem; }
