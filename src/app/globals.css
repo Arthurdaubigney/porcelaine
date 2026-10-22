@@ -143,16 +143,16 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif-stack); font-weight: 5
 .hero__facts li { position: relative; padding-left: 1rem; }
 .hero__facts li::before { content: ""; position: absolute; left: 0; top: .72em; width: 5px; height: 5px; background: var(--brass); border-radius: 50%; }
 .hero__art { margin: 0; }
-.hero__photo { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius); background: #6d7078; transition: transform var(--duration-very-slow) var(--ease-smooth-out); }
+.hero__photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); background: #6d7078; transition: transform var(--duration-very-slow) var(--ease-smooth-out); }
 .hero__photo:hover { transform: translateY(-4px); }
-.hero__photo--wide { aspect-ratio: 5 / 4; }
+.hero__photo--wide { aspect-ratio: 4 / 3; }
 .hero__photo img, .domain__img img, .piece__img img, .manufacture__img img { width: 100%; height: 100%; object-fit: cover; }
 .hero__caption { margin: .8rem 0 0; font-size: .8rem; line-height: 1.4; color: var(--ink-soft); }
 
 @media (max-width: 860px) {
   .hero__grid, .hero__grid--about { grid-template-columns: 1fr; }
   .hero__art { max-width: 340px; }
-  .hero__photo { aspect-ratio: 4 / 4.4; }
+  .hero__photo { aspect-ratio: 4 / 3; }
 }
 
 .page-hero { padding: clamp(3rem, 7vw, 6rem) 0 clamp(2.5rem, 5vw, 4.5rem); border-bottom: 1px solid var(--line); }
@@ -183,7 +183,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif-stack); font-weight: 5
 /* ----- Domaines ----- */
 .domains { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2vw, 1.75rem); }
 .domain__link { display: block; text-decoration: none; }
-.domain__img { display: block; background: #6d7078; aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; }
+.domain__img { display: block; background: #6d7078; aspect-ratio: 1 / 1; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; }
 .domain__img img { transition: transform var(--duration-very-slow) var(--ease-smooth-out); }
 .domain__link:hover .domain__img img { transform: scale(1.05) translateY(-3px); }
 .domain__name { display: block; font-family: var(--font-serif-stack); font-size: 1.6rem; font-weight: 600; line-height: 1.1; }
@@ -206,7 +206,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif-stack); font-weight: 5
 /* ----- Réalisations / avis ----- */
 .pieces { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 3vw, 3rem); }
 .piece figure { margin: 0 0 1.2rem; }
-.piece__img { display: block; background: #6d7078; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; }
+.piece__img { display: block; background: #6d7078; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; }
 .piece__img img { transition: transform var(--duration-very-slow) var(--ease-smooth-out); }
 .piece figcaption, .manufacture__img figcaption { margin-top: .6rem; font-size: .8rem; line-height: 1.4; color: var(--ink-soft); }
 .piece:hover .piece__img img { transform: scale(1.04); }
@@ -217,7 +217,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif-stack); font-weight: 5
 .review p { font-family: var(--font-serif-stack); font-size: 1.35rem; line-height: 1.35; }
 .review footer { font-size: .88rem; color: var(--ink-soft); }
 .review__flag { color: #9a3412; }
-@media (max-width: 860px) { .pieces, .reviews { grid-template-columns: 1fr; } .piece__img { max-width: 360px; } }
+@media (max-width: 860px) { .pieces, .reviews { grid-template-columns: 1fr; } .piece__img { max-width: 520px; } }
 
 /* ----- Bandeau CTA final ----- */
 .band { background: var(--navy); color: var(--cream); padding: clamp(3.5rem, 7vw, 6rem) 0; }
@@ -232,7 +232,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif-stack); font-weight: 5
 .manufacture--flip .manufacture__img { order: 2; }
 .manufacture__anchor { position: absolute; top: calc(-1 * var(--header-h) - 16px); }
 .manufacture__img { margin: 0; }
-.manufacture__img img { aspect-ratio: 4 / 5; border-radius: var(--radius); background: #6d7078; }
+.manufacture__img img { height: auto; border-radius: var(--radius); background: #6d7078; }
 .manufacture__title { margin-bottom: .3rem; }
 .manufacture__tag { font-family: var(--font-serif-stack); font-style: italic; font-size: 1.35rem; color: var(--brass-ink); margin-bottom: 1.2rem; }
 .manufacture__body p { color: var(--ink-soft); }

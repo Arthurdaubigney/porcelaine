@@ -1,6 +1,7 @@
 /**
- * Photographies du domaine public (CC0) — The Metropolitan Museum of Art, collection Open Access.
- * Ce sont des pièces de musée présentées à titre d'illustration, pas des pièces expertisées par la maison.
+ * Photographies de pièces et de services de porcelaine, sous licence libre (CC0 ou Creative Commons).
+ * Ce sont des pièces de musée ou de collection présentées à titre d'illustration, pas des pièces expertisées
+ * par la maison. Les crédits sont repris dans les légendes, le pied de page et les mentions légales.
  */
 export type Photo = {
   src: string;
@@ -10,90 +11,128 @@ export type Photo = {
   title: string;
   /** Légende visible : objet, manufacture, date. */
   caption: string;
-  /** Page source (collection du musée). */
+  /** Auteur / institution, tel qu'affiché dans le crédit. */
+  author: string;
+  license: { name: string; url: string };
+  /** Page source (collection du musée ou Wikimedia Commons). */
   source: string;
+  /** object-position CSS pour le recadrage (par défaut : centre). */
+  position?: string;
 };
 
-const MET = (id: number) => `https://www.metmuseum.org/art/collection/search/${id}`;
-
 export const PHOTOS = {
-  sevresVase: {
-    src: "/photos/sevres-vase.webp", width: 1400, height: 1400,
-    alt: "Vase à couvercle en porcelaine tendre de Sèvres, fond bleu nuit, dorures et médaillon peint d'une scène de port",
-    title: "Vase à couvercle de la manufacture de Sèvres, vers 1778 — exemple de porcelaine de Sèvres",
-    caption: "Vase à couvercle, manufacture de Sèvres, vers 1778",
-    source: MET(202183),
+  havilandService: {
+    src: "/photos/haviland-service.webp", width: 1400, height: 930,
+    alt: "Assiettes d'un service de table Haviland en porcelaine blanche à filet or, ornées d'une couronne polychrome",
+    title: "Service de table Haviland (Limoges) à couronne, XIXe siècle — porcelaine de Limoges ancienne",
+    caption: "Service Haviland à couronne, Limoges, XIXe siècle",
+    author: "Joseolgon, Wikimedia Commons",
+    license: { name: "CC BY-SA 4.0", url: "https://creativecommons.org/licenses/by-sa/4.0/" },
+    source: "https://commons.wikimedia.org/wiki/File:Limoges_Haviland_Sec_XIX.JPG",
+    position: "40% 50%",
   },
-  sevresElephant: {
-    src: "/photos/sevres-vase-elephant.webp", width: 1056, height: 1400,
-    alt: "Vase à tête d'éléphant en porcelaine tendre de Sèvres, fond bleu turquoise, bouquets de fleurs et dorures",
-    title: "Vase à tête d'éléphant de Sèvres, 1758-1762 — porcelaine ancienne de collection",
-    caption: "Vase à tête d'éléphant, manufacture de Sèvres, 1758–1762",
-    source: MET(206454),
+  havilandVitrine: {
+    src: "/photos/haviland-vitrine.webp", width: 1400, height: 930,
+    alt: "Tasses, bols et assiettes d'un service Haviland blanc et or à couronne, présentés en vitrine",
+    title: "Pièces d'un service de table Haviland, Limoges, XIXe siècle — estimation de services de table",
+    caption: "Pièces d'un service Haviland à couronne, Limoges, XIXe siècle",
+    author: "Joseolgon, Wikimedia Commons",
+    license: { name: "CC BY-SA 4.0", url: "https://creativecommons.org/licenses/by-sa/4.0/" },
+    source: "https://commons.wikimedia.org/wiki/File:Limoges_Haviland_Sec_XIX_(2).JPG",
   },
-  sevresTasse: {
-    src: "/photos/sevres-tasse.webp", width: 1400, height: 1100,
-    alt: "Tasse à l'étrusque et sa soucoupe en porcelaine de Sèvres, décor polychrome et bordure dorée",
-    title: "Tasse et soucoupe de Sèvres, 1794 — estimation de tasses anciennes",
-    caption: "Tasse « à l'étrusque » et soucoupe, manufacture de Sèvres, 1794",
-    source: MET(207819),
+  limogesChocolat: {
+    src: "/photos/limoges-chocolat.webp", width: 1400, height: 1179,
+    alt: "Service à chocolat de Limoges : chocolatière et tasses à décor de guirlandes de roses et filets dorés",
+    title: "Service à chocolat de Limoges, décor de guirlandes — porcelaine de Limoges ancienne",
+    caption: "Service à chocolat, Limoges, décor de guirlandes",
+    author: "Zeamays, Wikimedia Commons",
+    license: { name: "CC BY 3.0", url: "https://creativecommons.org/licenses/by/3.0/" },
+    source: "https://commons.wikimedia.org/wiki/File:Limoges_chocolate_set.jpg",
   },
-  limoges: {
-    src: "/photos/limoges-bracquemond.webp", width: 1332, height: 1340,
-    alt: "Assiette en porcelaine de Limoges, décor de volutes dorées en relief sur fond blanc, par Félix Bracquemond",
-    title: "Assiette de Limoges décorée par Félix Bracquemond, vers 1875 — porcelaine de Limoges ancienne",
-    caption: "Assiette, Limoges, décor de Félix Bracquemond, 1872–1880",
-    source: MET(487344),
+  sevresDejeuner1786: {
+    src: "/photos/sevres-dejeuner-1786.webp", width: 1050, height: 1400,
+    alt: "Déjeuner de Sèvres à fond jaune : plateau, théière, pot à lait, sucrier et tasse, décor de filets et motifs dorés",
+    title: "Déjeuner de la manufacture de Sèvres, 1786 — service à thé ancien en porcelaine tendre",
+    caption: "Déjeuner (service à thé), manufacture de Sèvres, 1786",
+    author: "Daderot, Wikimedia Commons",
+    license: { name: "CC0", url: "https://creativecommons.org/publicdomain/zero/1.0/" },
+    source: "https://commons.wikimedia.org/wiki/File:Tea_service_(dejeuner),_1786,_S%C3%A8vres,_decorator_Denis_Leve,_soft-paste_porcelain,_overglaze_enamels,_gilding_-_Gardiner_Museum,_Toronto_-_DSC01053.JPG",
   },
-  meissenTheiere: {
-    src: "/photos/meissen-theiere.webp", width: 1400, height: 1400,
-    alt: "Théière de Meissen en porcelaine dure à décor chinoisant polychrome, dorures et anse sculptée",
-    title: "Théière de la manufacture de Meissen, vers 1719-1730 — porcelaine de Saxe ancienne",
-    caption: "Théière à couvercle, manufacture de Meissen, vers 1719–1730",
-    source: MET(205267),
+  meissenService: {
+    src: "/photos/meissen-service.webp", width: 1050, height: 1400,
+    alt: "Service à thé de Meissen : cafetière et assiette à fond jaune, scènes peintes et dorures",
+    title: "Service à thé de Meissen, vers 1745 — porcelaine de Saxe ancienne",
+    caption: "Service à thé, manufacture de Meissen, vers 1745",
+    author: "Daderot, Wikimedia Commons",
+    license: { name: "CC0", url: "https://creativecommons.org/publicdomain/zero/1.0/" },
+    source: "https://commons.wikimedia.org/wiki/File:Tea_service,_view_1,_c._1745,_Meissen,_hard-paste_porcelain,_overglaze_enamels,_gilding_-_Gardiner_Museum,_Toronto_-_DSC00890.JPG",
   },
-  meissenSoupiere: {
-    src: "/photos/meissen-soupiere.webp", width: 1400, height: 1386,
-    alt: "Soupière à couvercle de Meissen surmontée d'un lion, décor de vues de ports et filets dorés",
-    title: "Soupière de Meissen, vers 1772-1774 — service de table ancien en porcelaine",
-    caption: "Soupière à couvercle, manufacture de Meissen, vers 1772–1774",
-    source: MET(188666),
+  compagnieDesIndesService: {
+    src: "/photos/compagnie-des-indes-service.webp", width: 1120, height: 1400,
+    alt: "Grand service de table en porcelaine chinoise d'exportation, décor armorié et filets dorés : soupières, plats et tasses",
+    title: "Service de table armorié en porcelaine chinoise d'exportation, 1785-1790 — type Compagnie des Indes",
+    caption: "Service armorié, porcelaine chinoise d'exportation pour le marché américain, 1785–1790",
+    author: "The Met",
+    license: { name: "CC0", url: "https://creativecommons.org/publicdomain/zero/1.0/" },
+    source: "https://www.metmuseum.org/art/collection/search/17778",
   },
-  meissenFigurine: {
-    src: "/photos/meissen-figurine.webp", width: 1400, height: 1094,
-    alt: "Figurine de théâtre de Meissen : dame en robe à paniers ornée de fleurs, porcelaine dure",
-    title: "Figurine de Meissen, 1750-1752 — figurine ancienne en porcelaine",
-    caption: "Figure de théâtre, manufacture de Meissen, 1750–1752",
-    source: MET(203059),
+  lowestoft: {
+    src: "/photos/angleterre-lowestoft.webp", width: 1400, height: 677,
+    alt: "Service à thé en porcelaine tendre de Lowestoft : théière, tasses, bols et pot à lait à décor de personnages",
+    title: "Service à thé de Lowestoft, fin du XVIIIe siècle — porcelaine anglaise ancienne",
+    caption: "Service à thé, Lowestoft (Angleterre), fin du XVIIIe ou début du XIXe siècle",
+    author: "The Met",
+    license: { name: "CC0", url: "https://creativecommons.org/publicdomain/zero/1.0/" },
+    source: "https://www.metmuseum.org/art/collection/search/704671",
   },
-  compagnieDesIndes: {
-    src: "/photos/compagnie-des-indes-plat.webp", width: 1400, height: 1049,
-    alt: "Plat de porcelaine chinoise d'exportation bleu et blanc, scène de culture du thé, vers 1740",
-    title: "Plat de la Compagnie des Indes, bleu et blanc, vers 1740-1745 — porcelaine chinoise d'exportation",
-    caption: "Plat à scène de culture du thé, Chine (Jingdezhen), vers 1740–1745",
-    source: MET(205312),
+  sevresReticule: {
+    src: "/photos/sevres-dejeuner-reticule.webp", width: 1400, height: 1074,
+    alt: "Déjeuner de Sèvres à décor chinois réticulé : théière, cafetière, tasses et plateau, porcelaine ajourée et dorée",
+    title: "Déjeuner « chinois réticulé » de Sèvres, 1855-1861 — service à thé et à café en porcelaine",
+    caption: "Déjeuner « chinois réticulé », manufacture de Sèvres, 1855–1861",
+    author: "The Met",
+    license: { name: "CC0", url: "https://creativecommons.org/publicdomain/zero/1.0/" },
+    source: "https://www.metmuseum.org/art/collection/search/205137",
+  },
+  chantilly: {
+    src: "/photos/chantilly-dejeuner.webp", width: 1400, height: 895,
+    alt: "Déjeuner de Chantilly à décor japonisant : théière, sucrier, tasses et plateau en porcelaine tendre",
+    title: "Déjeuner de la manufacture de Chantilly, vers 1730 — service à thé ancien en porcelaine",
+    caption: "Déjeuner, manufacture de Chantilly, vers 1730",
+    author: "Cleveland Museum of Art, Wikimedia Commons",
+    license: { name: "CC0", url: "https://creativecommons.org/publicdomain/zero/1.0/" },
+    source: "https://commons.wikimedia.org/wiki/File:Chantilly_Porcelain_Factory_(French)_-_Tea_Service_(D%C3%A9jeuner)_-_1944.228_-_Cleveland_Museum_of_Art.jpg",
+  },
+  imperial: {
+    src: "/photos/imperial-service.webp", width: 1400, height: 1181,
+    alt: "Service à thé et plateau en porcelaine bleu cobalt et or : cafetière, pot à lait, sucrier et tasse",
+    title: "Service à thé et plateau, Manufacture impériale de porcelaine — porcelaine ancienne bleu et or",
+    caption: "Service à thé et plateau, Manufacture impériale de porcelaine (musée V&A, Londres)",
+    author: "14GTR, Wikimedia Commons",
+    license: { name: "CC0", url: "https://creativecommons.org/publicdomain/zero/1.0/" },
+    source: "https://commons.wikimedia.org/wiki/File:Tea_service_%26_tray_by_the_Imperial_Porcelain_Factory,_V%26A_London_01.jpg",
   },
   chineVase: {
     src: "/photos/chine-vase.webp", width: 1050, height: 1400,
     alt: "Vase balustre chinois en porcelaine blanche à décor moulé et fleurs bleues sous couverte",
     title: "Vase chinois en porcelaine bleu et blanc, fin du XVIIIe siècle — porcelaine d'Asie",
     caption: "Petit vase, Chine, fin du XVIIIe siècle",
-    source: MET(460677),
+    author: "The Met",
+    license: { name: "CC0", url: "https://creativecommons.org/publicdomain/zero/1.0/" },
+    source: "https://www.metmuseum.org/art/collection/search/460677",
   },
-  angleterreMinton: {
-    src: "/photos/angleterre-minton.webp", width: 1120, height: 1400,
-    alt: "Vase en porcelaine anglaise de Minton, fond rose, anses et col dorés, décor de branches fleuries émaillées",
-    title: "Vase de Minton, après 1872 — porcelaine anglaise ancienne",
-    caption: "Vase à décor de branche fleurie, Minton (Angleterre), après 1872",
-    source: MET(771070),
-  },
-  japonImari: {
-    src: "/photos/japon-imari.webp", width: 1400, height: 1049,
-    alt: "Assiette japonaise de type Imari à vase de fleurs, émaux polychromes et dorures, vers 1770",
-    title: "Assiette japonaise de type Imari, vers 1770 — porcelaine du Japon ancienne",
-    caption: "Assiette à vase de fleurs, Japon (type Imari), vers 1770",
-    source: MET(208252),
+  meissenFigurine: {
+    src: "/photos/meissen-figurine.webp", width: 1400, height: 1094,
+    alt: "Figurine de théâtre de Meissen : dame en robe à paniers ornée de fleurs, porcelaine dure",
+    title: "Figurine de Meissen, 1750-1752 — figurine ancienne en porcelaine",
+    caption: "Figure de théâtre, manufacture de Meissen, 1750–1752",
+    author: "The Met",
+    license: { name: "CC0", url: "https://creativecommons.org/publicdomain/zero/1.0/" },
+    source: "https://www.metmuseum.org/art/collection/search/203059",
   },
 } satisfies Record<string, Photo>;
 
 export type PhotoKey = keyof typeof PHOTOS;
+
+/** Crédit court affiché sous les photos. */
+export const creditOf = (key: PhotoKey) => `${PHOTOS[key].author}, ${PHOTOS[key].license.name}`;

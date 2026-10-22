@@ -4,7 +4,7 @@ import { EstimateButton } from "@/components/Button";
 import { CtaBand } from "@/components/CtaBand";
 import { Reveal } from "@/components/Reveal";
 import { DOMAINS } from "@/data/domains";
-import { PHOTOS } from "@/data/photos";
+import { creditOf, PHOTOS } from "@/data/photos";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -46,7 +46,7 @@ export default function ExpertisesPage() {
                 <div id={d.slug} className="manufacture__anchor" />
                 <figure className="manufacture__img">
                   <Photo name={d.photo} sizes="(max-width: 860px) 90vw, 440px" />
-                  <figcaption>{PHOTOS[d.photo].caption} · The Met, CC0</figcaption>
+                  <figcaption>{PHOTOS[d.photo].caption} · {creditOf(d.photo)}</figcaption>
                 </figure>
                 <div className="manufacture__body">
                   <p className="eyebrow">{d.period}</p>

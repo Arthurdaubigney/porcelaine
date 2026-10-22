@@ -5,7 +5,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { DOMAINS } from "@/data/domains";
-import { PHOTOS } from "@/data/photos";
+import { creditOf, PHOTOS } from "@/data/photos";
 import { BUY_LIST, GUARANTEES, REFERENCE_PIECES, REVIEWS, STEPS } from "@/data/content";
 import { pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -85,9 +85,9 @@ export default function HomePage() {
           </div>
           <figure className="hero__art">
             <div className="hero__photo">
-              <Photo name="sevresVase" priority sizes="(max-width: 860px) 70vw, 420px" />
+              <Photo name="havilandService" priority sizes="(max-width: 860px) 90vw, 440px" />
             </div>
-            <figcaption className="hero__caption">{PHOTOS.sevresVase.caption} · The Met, CC0</figcaption>
+            <figcaption className="hero__caption">{PHOTOS.havilandService.caption} · {creditOf("havilandService")}</figcaption>
           </figure>
         </div>
       </section>
@@ -180,7 +180,7 @@ export default function HomePage() {
           <Reveal className="section__head">
             <p className="eyebrow">Pièces de référence</p>
             <h2 id="realisations-title" className="h2">Ce que notre œil cherche sur une porcelaine ancienne</h2>
-            <p className="lead">Trois pièces de musée, présentées à titre d'illustration, pour comprendre les critères de l'expertise.</p>
+            <p className="lead">Trois services de musée, présentés à titre d'illustration, pour comprendre les critères de l'expertise.</p>
           </Reveal>
           <ul className="pieces">
             {REFERENCE_PIECES.map((p, i) => (
@@ -189,7 +189,7 @@ export default function HomePage() {
                   <span className="piece__img">
                     <Photo name={p.photo} sizes="(max-width: 860px) 90vw, 380px" />
                   </span>
-                  <figcaption>{PHOTOS[p.photo].caption} · The Met, CC0</figcaption>
+                  <figcaption>{PHOTOS[p.photo].caption} · {creditOf(p.photo)}</figcaption>
                 </figure>
                 <h3 className="h3">{p.title}</h3>
                 <p>{p.text}</p>
