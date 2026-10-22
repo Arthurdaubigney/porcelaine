@@ -6,14 +6,14 @@ import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { DOMAINS } from "@/data/domains";
 import { creditOf, PHOTOS } from "@/data/photos";
-import { BUY_LIST, GUARANTEES, REFERENCE_PIECES, REVIEWS, STEPS } from "@/data/content";
+import { BUY_LIST, GUARANTEES, PRIORITY_SERVICES, REFERENCE_PIECES, REVIEWS, STEPS } from "@/data/content";
 import { pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Rachat & Estimation de Porcelaine Ancienne – Gratuit",
   description:
-    "Faites estimer gratuitement votre porcelaine ancienne : Sèvres, Limoges, Meissen. Expertise argumentée, déplacement possible, paiement immédiat.",
+    "Nous rachetons vos services de vaisselle en porcelaine : Haviland, Limoges, Sèvres, Meissen. Estimation gratuite, déplacement possible, paiement immédiat.",
   path: "/",
 });
 
@@ -70,8 +70,9 @@ export default function HomePage() {
               Rachat &amp; Estimation de <em>Porcelaine Ancienne</em>
             </h1>
             <p className="lead hero__lead">
-              Sèvres, Limoges, Meissen, Compagnie des Indes : un expert examine vos pièces, vous remet une estimation
-              honnête et argumentée et, si elles nous intéressent, vous propose un rachat réglé immédiatement.
+              Nous recherchons avant tout des services de vaisselle complets en porcelaine : Haviland, Limoges, Sèvres,
+              Meissen. Un expert examine vos pièces, vous remet une estimation honnête et argumentée et, si elles nous
+              intéressent, vous propose un rachat réglé immédiatement.
             </p>
             <div className="actions">
               <EstimateButton />
@@ -89,6 +90,30 @@ export default function HomePage() {
             </div>
             <figcaption className="hero__caption">{PHOTOS.heroService.caption}{creditOf("heroService")}</figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section className="section section--navy priority" aria-labelledby="priorite-title">
+        <div className="container prose-grid">
+          <Reveal>
+            <p className="eyebrow eyebrow--light">Notre priorité</p>
+            <h2 id="priorite-title" className="h2">Nous recherchons avant tout des services de vaisselle en porcelaine</h2>
+            <p className="priority__lead">
+              Le service de votre grand-mère, un héritage, un buffet que l'on vide : si vous avez un service complet,
+              même ordinaire en apparence, il nous intéresse. Photographiez l'ensemble et envoyez-le nous.
+            </p>
+            <EstimateButton variant="brass" label="Faire estimer mon service" />
+          </Reveal>
+          <Reveal delay={80}>
+            <ul className="priority__list">
+              {PRIORITY_SERVICES.map((item) => (
+                <li key={item.title}>
+                  <h3 className="h3">{item.title}</h3>
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
       </section>
 
@@ -138,8 +163,8 @@ export default function HomePage() {
       <section className="section section--tone" aria-labelledby="rachat-title">
         <div className="container prose-grid">
           <Reveal>
-            <p className="eyebrow">Ce que nous rachetons</p>
-            <h2 id="rachat-title" className="h2">Rachat de porcelaine ancienne, de la pièce isolée au service complet</h2>
+            <p className="eyebrow">Nous rachetons aussi</p>
+            <h2 id="rachat-title" className="h2">Pièces isolées, objets d'art et successions</h2>
           </Reveal>
           <Reveal delay={80}>
             <ul className="buylist">
