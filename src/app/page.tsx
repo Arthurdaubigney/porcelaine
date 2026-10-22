@@ -60,35 +60,42 @@ export default function HomePage() {
       />
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="container hero__grid">
-          <div className="hero__copy">
-            <p className="badge">
-              <span className="badge__dot" aria-hidden="true" />
-              Estimation gratuite · Sans engagement
-            </p>
-            <h1 id="hero-title" className="h1 hero__title">
-              Rachat &amp; Estimation de <em>Porcelaine Ancienne</em>
-            </h1>
-            <p className="lead hero__lead">
-              Sèvres, Limoges, Meissen, Compagnie des Indes : un expert examine vos pièces, vous remet une estimation
-              honnête et argumentée et, si elles nous intéressent, vous propose un rachat réglé immédiatement.
-            </p>
-            <div className="actions">
-              <EstimateButton />
-              <Button href="/expertises" variant="ghost">Découvrir nos expertises</Button>
+        <div className="container">
+          <div className="hero__top">
+            <div className="hero__copy">
+              <p className="badge">
+                <span className="badge__dot" aria-hidden="true" />
+                Estimation gratuite · Sans engagement
+              </p>
+              <h1 id="hero-title" className="h1 hero__title">
+                Rachat &amp; Estimation de <em>Porcelaine Ancienne</em>
+              </h1>
             </div>
-            <ul className="hero__facts" aria-label="Nos engagements">
-              <li>Confidentialité totale</li>
-              <li>Déplacement possible</li>
-              <li>Paiement immédiat</li>
-            </ul>
+            <div className="hero__side">
+              <p className="lead hero__lead">
+                Sèvres, Limoges, Meissen, Compagnie des Indes : un expert examine vos pièces, vous remet une
+                estimation honnête et argumentée et, si elles nous intéressent, vous propose un rachat réglé
+                immédiatement.
+              </p>
+              <div className="actions">
+                <EstimateButton />
+                <Button href="/expertises" variant="ghost">Découvrir nos expertises</Button>
+              </div>
+            </div>
           </div>
-          <figure className="hero__art">
-            <div className="hero__photo">
-              <Photo name="havilandService" priority sizes="(max-width: 860px) 90vw, 440px" />
+
+          <figure className="hero__banner">
+            <div className="hero__photo hero__photo--banner">
+              <Photo name="havilandService" priority sizes="(max-width: 1248px) 100vw, 1200px" />
             </div>
             <figcaption className="hero__caption">{PHOTOS.havilandService.caption} · {creditOf("havilandService")}</figcaption>
           </figure>
+
+          <ul className="hero__facts" aria-label="Nos engagements">
+            <li>Confidentialité totale</li>
+            <li>Déplacement possible</li>
+            <li>Paiement immédiat</li>
+          </ul>
         </div>
       </section>
 
