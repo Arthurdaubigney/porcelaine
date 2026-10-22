@@ -47,7 +47,6 @@ export const FAQ = [
 export const PRIORITY_SERVICES = [
   { title: "Services de table complets", text: "Assiettes plates, creuses et à dessert, plats, soupière, saucière, légumier : un service de 12 couverts ou plus, complet ou presque, est notre première recherche." },
   { title: "Services à thé et à café", text: "Théière, cafetière, sucrier, pot à lait, tasses et soucoupes, réunis sur un même décor." },
-  { title: "Haviland, Limoges et grandes manufactures", text: "Haviland et Limoges en priorité, mais aussi Sèvres, Meissen et la porcelaine d'Asie : un décor reconnaissable et une marque lisible au revers font la différence." },
 ] as const;
 
 export const BUY_LIST = [
