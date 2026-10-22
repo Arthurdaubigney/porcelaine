@@ -11,7 +11,7 @@ export const metadata = pageMetadata({
   path: "/mentions-legales",
 });
 
-const sources = Array.from(new Set(Object.values(PHOTOS).map((p) => p.source)));
+const credits = Object.values(PHOTOS);
 
 export default function LegalPage() {
   return (
@@ -63,18 +63,21 @@ export default function LegalPage() {
             Les textes, le logo et la mise en page du site sont la propriété de l'éditeur. Toute reproduction sans
             autorisation préalable est interdite.
           </p>
+          <h2 id="credits-photos">Crédits photographiques</h2>
           <p>
-            Les photographies de porcelaines proviennent de la collection Open Access du{" "}
-            <a href="https://www.metmuseum.org/art/collection" rel="noopener noreferrer" target="_blank">
-              Metropolitan Museum of Art
-            </a>{" "}
-            (New York), placées dans le domaine public (CC0). Il s'agit de pièces de musée présentées à titre
-            d'illustration ; elles ne constituent pas des pièces expertisées ou vendues par l'éditeur. Pages sources :
+            Les photographies de porcelaines proviennent de collections muséales (Metropolitan Museum of Art,
+            Cleveland Museum of Art, Gardiner Museum, V&amp;A) et de Wikimedia Commons, sous licence libre (CC0,
+            CC BY ou CC BY-SA). Elles ont été recadrées et redimensionnées pour le site ; les photographies sous
+            licence CC BY-SA restent partagées sous cette même licence. Il s'agit de pièces de musée ou de collection
+            présentées à titre d'illustration : elles ne constituent pas des pièces expertisées ou vendues par
+            l'éditeur.
           </p>
           <ul>
-            {sources.map((src) => (
-              <li key={src}>
-                <a href={src} rel="noopener noreferrer" target="_blank">{src.replace("https://www.", "")}</a>
+            {credits.map((c) => (
+              <li key={c.src}>
+                {c.caption} — {c.author},{" "}
+                <a href={c.license.url} rel="noopener noreferrer" target="_blank">{c.license.name}</a> (
+                <a href={c.source} rel="noopener noreferrer" target="_blank">source</a>)
               </li>
             ))}
           </ul>

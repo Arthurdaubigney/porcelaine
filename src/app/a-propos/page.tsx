@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Photo } from "@/components/Photo";
+import { creditOf, PHOTOS } from "@/data/photos";
 import { CtaBand } from "@/components/CtaBand";
 import { Reveal } from "@/components/Reveal";
 import { pageMetadata } from "@/lib/seo";
@@ -34,9 +35,9 @@ export default function AboutPage() {
           </div>
           <figure className="hero__art hero__art--small">
             <div className="hero__photo hero__photo--wide">
-              <Photo name="sevresTasse" priority sizes="(max-width: 860px) 80vw, 320px" />
+              <Photo name="sevresReticule" priority sizes="(max-width: 860px) 80vw, 320px" />
             </div>
-            <figcaption className="hero__caption">Tasse et soucoupe, Sèvres, 1794 · The Met, CC0</figcaption>
+            <figcaption className="hero__caption">{PHOTOS.sevresReticule.caption} · {creditOf("sevresReticule")}</figcaption>
           </figure>
         </div>
       </section>

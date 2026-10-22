@@ -40,11 +40,8 @@ export function Footer() {
         </p>
         <p>Confidentialité garantie · Paiement immédiat</p>
         <p className="footer__credit">
-          Photographies : pièces de musée du{" "}
-          <a href="https://www.metmuseum.org/art/collection" rel="noopener noreferrer" target="_blank">
-            Metropolitan Museum of Art
-          </a>{" "}
-          (domaine public, CC0), présentées à titre d'illustration.
+          Photographies de pièces de musée et de collections, sous licence libre (CC0, CC BY, CC BY-SA), présentées à
+          titre d'illustration : <Link href="/mentions-legales#credits-photos">crédits détaillés</Link>.
         </p>
       </div>
     </footer>

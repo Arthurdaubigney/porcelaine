@@ -15,7 +15,7 @@ export const DOMAINS: Domain[] = [
     slug: "sevres",
     name: "Sèvres",
     tagline: "La manufacture royale",
-    photo: "sevresVase",
+    photo: "sevresDejeuner1786",
     period: "Depuis 1740 (Vincennes), Sèvres depuis 1756",
     detail:
       "Fondée à Vincennes puis installée à Sèvres sous la protection de Louis XV, la manufacture produit des pièces d'exception : bleu de roi, bleu céleste, rose Pompadour, biscuits et services d'apparat. Les marques peintes, les lettres-dates et les marques de doreurs permettent de dater précisément une pièce.",
@@ -26,7 +26,7 @@ export const DOMAINS: Domain[] = [
     slug: "limoges",
     name: "Limoges",
     tagline: "Le kaolin du Limousin",
-    photo: "limoges",
+    photo: "limogesChocolat",
     period: "Depuis 1771",
     detail:
       "Depuis la découverte du kaolin à Saint-Yrieix, Limoges est devenue la capitale française de la porcelaine de table. Haviland, Bernardaud, Raynaud, Guérin-Pouyat ou Bawo & Dotter : les services complets décorés à la main sont particulièrement recherchés.",
@@ -37,7 +37,7 @@ export const DOMAINS: Domain[] = [
     slug: "meissen",
     name: "Meissen & Saxe",
     tagline: "La première porcelaine dure d'Europe",
-    photo: "meissenTheiere",
+    photo: "meissenService",
     period: "Depuis 1710",
     detail:
       "Meissen invente la porcelaine dure européenne dès 1710. Ses figurines, ses services à fleurs allemandes, ses pièces à décor chinoisant et ses fonds colorés font l'objet d'une demande internationale. Dresden regroupe aussi de nombreux ateliers de décoration, souvent confondus avec la manufacture.",
@@ -48,7 +48,7 @@ export const DOMAINS: Domain[] = [
     slug: "compagnie-des-indes",
     name: "Compagnie des Indes",
     tagline: "Porcelaine de commande, XVIIIe siècle",
-    photo: "compagnieDesIndes",
+    photo: "compagnieDesIndesService",
     period: "XVIIe – XVIIIe siècles",
     detail:
       "Exportée de Chine vers l'Europe sur les navires des compagnies des Indes, cette porcelaine de commande mêle goût occidental et savoir-faire chinois : famille rose, famille verte, armoriées, bleu et blanc, décors de grisaille. Les pièces armoriées sont les plus convoitées.",
@@ -81,7 +81,7 @@ export const DOMAINS: Domain[] = [
     slug: "services-de-table",
     name: "Services de table",
     tagline: "Services complets et pièces d'apparat",
-    photo: "meissenSoupiere",
+    photo: "havilandVitrine",
     period: "XIXe – XXe siècles",
     detail:
       "Services de 12 couverts, soupières, plats, assiettes à dessert, services à thé et à café, services de mariage : un ensemble complet, documenté et sans éclat, se valorise bien mieux que des pièces dispersées. Ne les séparez pas avant l'estimation.",
@@ -91,11 +91,11 @@ export const DOMAINS: Domain[] = [
   {
     slug: "porcelaine-anglaise",
     name: "Porcelaine anglaise",
-    tagline: "Worcester, Derby, Minton, Spode",
-    photo: "angleterreMinton",
+    tagline: "Worcester, Derby, Lowestoft, Minton",
+    photo: "lowestoft",
     period: "Depuis 1751 (Worcester)",
     detail:
-      "Worcester (fondée en 1751), Derby, Minton, Spode ou Royal Crown Derby : l'Angleterre a développé la pâte tendre, puis la porcelaine « bone china ». Services à thé, vases à fonds colorés, groupes en biscuit et pièces décorées à la main se vendent très bien lorsque la marque et le décor sont identifiables.",
+      "Worcester (fondée en 1751), Derby, Lowestoft, Minton, Spode ou Royal Crown Derby : l'Angleterre a développé la pâte tendre, puis la porcelaine « bone china ». Services à thé, vases à fonds colorés, groupes en biscuit et pièces décorées à la main se vendent très bien lorsque la marque et le décor sont identifiables.",
     marks:
       "Marques imprimées ou peintes au revers (nom de la manufacture, couronne, croissant pour Worcester), numéros de modèle, et cachets de date en creux chez Minton. Plusieurs maisons ont changé de nom : la marque aide à situer la période.",
   },

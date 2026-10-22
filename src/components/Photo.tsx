@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PHOTOS, type PhotoKey } from "@/data/photos";
+import { PHOTOS, type Photo as PhotoData, type PhotoKey } from "@/data/photos";
 
 type PhotoProps = {
   name: PhotoKey;
@@ -10,7 +10,7 @@ type PhotoProps = {
 
 /** Photographie CC0 du Met, optimisée par next/image (alt + title issus de data/photos.ts). */
 export function Photo({ name, sizes, priority = false, className }: PhotoProps) {
-  const p = PHOTOS[name];
+  const p: PhotoData = PHOTOS[name];
   return (
     <Image
       src={p.src}
@@ -22,6 +22,7 @@ export function Photo({ name, sizes, priority = false, className }: PhotoProps) 
       priority={priority}
       quality={78}
       className={className}
+      style={p.position ? { objectPosition: p.position } : undefined}
     />
   );
 }

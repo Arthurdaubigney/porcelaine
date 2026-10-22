@@ -15,9 +15,9 @@ export const STEPS = [
 
 /** Pièces de musée (CC0) pour illustrer ce que nous recherchons — voir data/photos.ts. */
 export const REFERENCE_PIECES = [
-  { photo: "sevresElephant", title: "Sèvres : fonds colorés et dorure", text: "Un fond bleu turquoise, des bouquets peints et des dorures nettes : trois critères que nous scrutons sur toute pièce de Sèvres." },
-  { photo: "sevresTasse", title: "Tasses et soucoupes anciennes", text: "Décor polychrome, filet or, marque au revers : une pièce modeste en apparence peut être très recherchée." },
-  { photo: "japonImari", title: "Porcelaines du Japon", text: "Imari, Kakiemon, Arita : les émaux et la qualité du pinceau distinguent l'ancien des productions plus tardives." },
+  { photo: "sevresReticule", title: "Les déjeuners de Sèvres", text: "Théière, pot à lait, sucrier et tasses réunis sur un plateau : un déjeuner complet, aux dorures intactes, vaut généralement bien plus que ses pièces dispersées." },
+  { photo: "chantilly", title: "Chantilly et le goût du Japon", text: "Pâte tendre et décors inspirés des porcelaines japonaises : la finesse de la pâte et la netteté du décor guident l'expertise." },
+  { photo: "imperial", title: "Services bleu et or", text: "Fonds colorés et dorures épaisses : l'usure de l'or et les éclats de bordure sont examinés pièce par pièce." },
 ] as const satisfies readonly { photo: PhotoKey; title: string; text: string }[];
 
 export type Review = { name: string; place: string; text: string; placeholder?: boolean };
