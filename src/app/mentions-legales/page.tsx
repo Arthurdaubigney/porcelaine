@@ -66,9 +66,8 @@ export default function LegalPage() {
           <h2 id="credits-photos">Crédits photographiques</h2>
           <p>
             Les photographies de porcelaines proviennent de collections muséales (Metropolitan Museum of Art,
-            Cleveland Museum of Art, Gardiner Museum, V&amp;A) et de Wikimedia Commons, sous licence libre (CC0,
-            CC BY ou CC BY-SA). Elles ont été recadrées et redimensionnées pour le site ; les photographies sous
-            licence CC BY-SA restent partagées sous cette même licence. Il s'agit de pièces de musée ou de collection
+            Cleveland Museum of Art, Gardiner Museum, V&amp;A) et de Wikimedia Commons, sous licence libre (CC0 ou
+            CC BY, avec mention de l'auteur). Elles ont été recadrées et redimensionnées pour le site. Il s'agit de pièces de musée ou de collection
             présentées à titre d'illustration : elles ne constituent pas des pièces expertisées ou vendues par
             l'éditeur. Les autres photographies (page d'accueil) sont la propriété de l'éditeur.
           </p>

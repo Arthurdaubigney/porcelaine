@@ -59,7 +59,7 @@ export default function HomePage() {
         }}
       />
 
-      <section className="hero" aria-labelledby="hero-title">
+      <section className="hero hero--home" aria-labelledby="hero-title">
         <div className="container hero__grid hero__grid--portrait">
           <div className="hero__copy">
             <p className="badge">
@@ -152,10 +152,6 @@ export default function HomePage() {
             </p>
           </Reveal>
         </div>
-        <Reveal as="figure" className="container wide-figure">
-          <Photo name="serviceTableBleu" sizes="(max-width: 1248px) 100vw, 1200px" />
-          <figcaption>{PHOTOS.serviceTableBleu.caption}{creditOf("serviceTableBleu")}</figcaption>
-        </Reveal>
       </section>
 
       <section className="section section--navy" aria-labelledby="etapes-title">

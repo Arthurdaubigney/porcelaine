@@ -34,15 +34,6 @@ export const PHOTOS = {
     title: "Service de table en porcelaine à fleurs bleues — rachat de services de vaisselle anciens",
     caption: "Service de table complet en porcelaine, décor de fleurs bleues",
   },
-  havilandVitrine: {
-    src: "/photos/haviland-vitrine.webp", width: 1400, height: 930,
-    alt: "Tasses, bols et assiettes d'un service Haviland blanc et or à couronne, présentés en vitrine",
-    title: "Pièces d'un service de table Haviland, Limoges, XIXe siècle — estimation de services de table",
-    caption: "Pièces d'un service Haviland à couronne, Limoges, XIXe siècle",
-    author: "Joseolgon, Wikimedia Commons",
-    license: { name: "CC BY-SA 4.0", url: "https://creativecommons.org/licenses/by-sa/4.0/" },
-    source: "https://commons.wikimedia.org/wiki/File:Limoges_Haviland_Sec_XIX_(2).JPG",
-  },
   limogesChocolat: {
     src: "/photos/limoges-chocolat.webp", width: 1400, height: 1179,
     alt: "Service à chocolat de Limoges : chocolatière et tasses à décor de guirlandes de roses et filets dorés",
