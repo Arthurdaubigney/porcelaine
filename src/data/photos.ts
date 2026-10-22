@@ -22,11 +22,17 @@ export type Photo = {
 };
 
 export const PHOTOS = {
-  accueilService: {
-    src: "/photos/accueil-service.webp", width: 1067, height: 639,
-    alt: "Service de table complet en porcelaine blanche à fleurs bleues : piles d'assiettes, soupière, saucière, plats, théière, cafetière, sucrier et tasses",
+  heroService: {
+    src: "/photos/hero-service.webp", width: 1440, height: 1920,
+    alt: "Service de table complet en porcelaine blanche à fleurs bleues : soupières, saucière, plats, piles d'assiettes, cafetière, sucrier, pot à lait et tasses avec soucoupes",
     title: "Service de table complet en porcelaine Haviland à décor de fleurs bleues — estimation et rachat de services de table",
-    caption: "Service de table complet en porcelaine à décor de fleurs bleues",
+    caption: "Service de table complet en porcelaine, décor de fleurs bleues",
+  },
+  serviceTableBleu: {
+    src: "/photos/service-table-bleu.webp", width: 1067, height: 639,
+    alt: "Service de table complet en porcelaine blanche à fleurs bleues : piles d'assiettes, soupière, saucière, plats, théière, cafetière, sucrier et tasses",
+    title: "Service de table en porcelaine à fleurs bleues — rachat de services de vaisselle anciens",
+    caption: "Service de table complet en porcelaine, décor de fleurs bleues",
   },
   havilandVitrine: {
     src: "/photos/haviland-vitrine.webp", width: 1400, height: 930,
