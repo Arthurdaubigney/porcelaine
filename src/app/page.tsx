@@ -86,9 +86,9 @@ export default function HomePage() {
 
           <figure className="hero__banner">
             <div className="hero__photo hero__photo--banner">
-              <Photo name="havilandService" priority sizes="(max-width: 1248px) 100vw, 1200px" />
+              <Photo name="accueilService" priority sizes="(max-width: 1248px) 100vw, 1200px" />
             </div>
-            <figcaption className="hero__caption">{PHOTOS.havilandService.caption} · {creditOf("havilandService")}</figcaption>
+            <figcaption className="hero__caption">{PHOTOS.accueilService.caption}{creditOf("accueilService")}</figcaption>
           </figure>
 
           <ul className="hero__facts" aria-label="Nos engagements">
@@ -196,7 +196,7 @@ export default function HomePage() {
                   <span className="piece__img">
                     <Photo name={p.photo} sizes="(max-width: 860px) 90vw, 380px" />
                   </span>
-                  <figcaption>{PHOTOS[p.photo].caption} · {creditOf(p.photo)}</figcaption>
+                  <figcaption>{PHOTOS[p.photo].caption}{creditOf(p.photo)}</figcaption>
                 </figure>
                 <h3 className="h3">{p.title}</h3>
                 <p>{p.text}</p>

@@ -37,7 +37,7 @@ export default function AboutPage() {
             <div className="hero__photo hero__photo--wide">
               <Photo name="sevresReticule" priority sizes="(max-width: 860px) 80vw, 320px" />
             </div>
-            <figcaption className="hero__caption">{PHOTOS.sevresReticule.caption} · {creditOf("sevresReticule")}</figcaption>
+            <figcaption className="hero__caption">{PHOTOS.sevresReticule.caption}{creditOf("sevresReticule")}</figcaption>
           </figure>
         </div>
       </section>

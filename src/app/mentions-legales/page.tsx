@@ -1,5 +1,5 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { PHOTOS } from "@/data/photos";
+import { PHOTOS, type Photo } from "@/data/photos";
 import { pageMetadata } from "@/lib/seo";
 import { ESTIMATION_HREF, LEGAL, SITE } from "@/lib/site";
 import Link from "next/link";
@@ -11,7 +11,7 @@ export const metadata = pageMetadata({
   path: "/mentions-legales",
 });
 
-const credits = Object.values(PHOTOS);
+const credits = (Object.values(PHOTOS) as Photo[]).filter((p) => p.author && p.license && p.source);
 
 export default function LegalPage() {
   return (
@@ -70,13 +70,13 @@ export default function LegalPage() {
             CC BY ou CC BY-SA). Elles ont été recadrées et redimensionnées pour le site ; les photographies sous
             licence CC BY-SA restent partagées sous cette même licence. Il s'agit de pièces de musée ou de collection
             présentées à titre d'illustration : elles ne constituent pas des pièces expertisées ou vendues par
-            l'éditeur.
+            l'éditeur. Les autres photographies (page d'accueil) sont la propriété de l'éditeur.
           </p>
           <ul>
             {credits.map((c) => (
               <li key={c.src}>
                 {c.caption} — {c.author},{" "}
-                <a href={c.license.url} rel="noopener noreferrer" target="_blank">{c.license.name}</a> (
+                <a href={c.license?.url} rel="noopener noreferrer" target="_blank">{c.license?.name}</a> (
                 <a href={c.source} rel="noopener noreferrer" target="_blank">source</a>)
               </li>
             ))}
