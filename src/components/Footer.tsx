@@ -40,7 +40,7 @@ export function Footer() {
         </p>
         <p>Confidentialité garantie · Paiement immédiat</p>
         <p className="footer__credit">
-          Photographies de pièces de musée et de collections, sous licence libre (CC0, CC BY, CC BY-SA), présentées à
+          Photographies de pièces de musée et de collections, sous licence libre (CC0, CC BY), présentées à
           titre d'illustration : <Link href="/mentions-legales#credits-photos">crédits détaillés</Link>.
         </p>
       </div>

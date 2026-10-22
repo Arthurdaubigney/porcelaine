@@ -81,7 +81,7 @@ export const DOMAINS: Domain[] = [
     slug: "services-de-table",
     name: "Services de table",
     tagline: "Services complets et pièces d'apparat",
-    photo: "havilandVitrine",
+    photo: "serviceTableBleu",
     period: "XIXe – XXe siècles",
     detail:
       "Services de 12 couverts, soupières, plats, assiettes à dessert, services à thé et à café, services de mariage : un ensemble complet, documenté et sans éclat, se valorise bien mieux que des pièces dispersées. Ne les séparez pas avant l'estimation.",
