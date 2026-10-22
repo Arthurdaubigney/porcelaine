@@ -60,7 +60,7 @@ export default function HomePage() {
       />
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="container hero__grid">
+        <div className="container hero__grid hero__grid--portrait">
           <div className="hero__copy">
             <p className="badge">
               <span className="badge__dot" aria-hidden="true" />
@@ -84,10 +84,10 @@ export default function HomePage() {
             </ul>
           </div>
           <figure className="hero__art">
-            <div className="hero__photo">
-              <Photo name="havilandService" priority sizes="(max-width: 860px) 90vw, 440px" />
+            <div className="hero__photo hero__photo--portrait">
+              <Photo name="heroService" priority sizes="(max-width: 860px) 92vw, 560px" />
             </div>
-            <figcaption className="hero__caption">{PHOTOS.havilandService.caption} · {creditOf("havilandService")}</figcaption>
+            <figcaption className="hero__caption">{PHOTOS.heroService.caption}{creditOf("heroService")}</figcaption>
           </figure>
         </div>
       </section>
@@ -152,6 +152,10 @@ export default function HomePage() {
             </p>
           </Reveal>
         </div>
+        <Reveal as="figure" className="container wide-figure">
+          <Photo name="serviceTableBleu" sizes="(max-width: 1248px) 100vw, 1200px" />
+          <figcaption>{PHOTOS.serviceTableBleu.caption}{creditOf("serviceTableBleu")}</figcaption>
+        </Reveal>
       </section>
 
       <section className="section section--navy" aria-labelledby="etapes-title">
@@ -189,7 +193,7 @@ export default function HomePage() {
                   <span className="piece__img">
                     <Photo name={p.photo} sizes="(max-width: 860px) 90vw, 380px" />
                   </span>
-                  <figcaption>{PHOTOS[p.photo].caption} · {creditOf(p.photo)}</figcaption>
+                  <figcaption>{PHOTOS[p.photo].caption}{creditOf(p.photo)}</figcaption>
                 </figure>
                 <h3 className="h3">{p.title}</h3>
                 <p>{p.text}</p>

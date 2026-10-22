@@ -46,7 +46,7 @@ export default function ExpertisesPage() {
                 <div id={d.slug} className="manufacture__anchor" />
                 <figure className="manufacture__img">
                   <Photo name={d.photo} sizes="(max-width: 860px) 90vw, 440px" />
-                  <figcaption>{PHOTOS[d.photo].caption} · {creditOf(d.photo)}</figcaption>
+                  <figcaption>{PHOTOS[d.photo].caption}{creditOf(d.photo)}</figcaption>
                 </figure>
                 <div className="manufacture__body">
                   <p className="eyebrow">{d.period}</p>

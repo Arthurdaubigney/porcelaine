@@ -12,24 +12,27 @@ export type Photo = {
   /** Légende visible : objet, manufacture, date. */
   caption: string;
   /** Auteur / institution, tel qu'affiché dans le crédit. */
-  author: string;
-  license: { name: string; url: string };
+  author?: string;
+  /** Absent pour les photos de la maison (aucun crédit à afficher). */
+  license?: { name: string; url: string };
   /** Page source (collection du musée ou Wikimedia Commons). */
-  source: string;
+  source?: string;
   /** object-position CSS pour le recadrage (par défaut : centre). */
   position?: string;
 };
 
 export const PHOTOS = {
-  havilandService: {
-    src: "/photos/haviland-service.webp", width: 1400, height: 930,
-    alt: "Assiettes d'un service de table Haviland en porcelaine blanche à filet or, ornées d'une couronne polychrome",
-    title: "Service de table Haviland (Limoges) à couronne, XIXe siècle — porcelaine de Limoges ancienne",
-    caption: "Service Haviland à couronne, Limoges, XIXe siècle",
-    author: "Joseolgon, Wikimedia Commons",
-    license: { name: "CC BY-SA 4.0", url: "https://creativecommons.org/licenses/by-sa/4.0/" },
-    source: "https://commons.wikimedia.org/wiki/File:Limoges_Haviland_Sec_XIX.JPG",
-    position: "40% 50%",
+  heroService: {
+    src: "/photos/hero-service.webp", width: 1440, height: 1920,
+    alt: "Service de table complet en porcelaine blanche à fleurs bleues : soupières, saucière, plats, piles d'assiettes, cafetière, sucrier, pot à lait et tasses avec soucoupes",
+    title: "Service de table complet en porcelaine Haviland à décor de fleurs bleues — estimation et rachat de services de table",
+    caption: "Service de table complet en porcelaine, décor de fleurs bleues",
+  },
+  serviceTableBleu: {
+    src: "/photos/service-table-bleu.webp", width: 1067, height: 639,
+    alt: "Service de table complet en porcelaine blanche à fleurs bleues : piles d'assiettes, soupière, saucière, plats, théière, cafetière, sucrier et tasses",
+    title: "Service de table en porcelaine à fleurs bleues — rachat de services de vaisselle anciens",
+    caption: "Service de table complet en porcelaine, décor de fleurs bleues",
   },
   havilandVitrine: {
     src: "/photos/haviland-vitrine.webp", width: 1400, height: 930,
@@ -135,4 +138,7 @@ export const PHOTOS = {
 export type PhotoKey = keyof typeof PHOTOS;
 
 /** Crédit court affiché sous les photos. */
-export const creditOf = (key: PhotoKey) => `${PHOTOS[key].author}, ${PHOTOS[key].license.name}`;
+export const creditOf = (key: PhotoKey): string => {
+  const p: Photo = PHOTOS[key];
+  return p.author && p.license ? ` · ${p.author}, ${p.license.name}` : "";
+};
