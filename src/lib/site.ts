@@ -1,9 +1,6 @@
-/** URL publique : variable explicite, sinon domaine de production Vercel, sinon placeholder. */
-const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "") ||
-  "https://www.example.com"
-).replace(/\/$/, "");
+/** URL publique officielle (canonique, sitemap, Open Graph, données structurées). */
+const DEFAULT_SITE_URL = "https://www.maison-porcelaine.fr";
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, "");
 
 /**
  * Informations de l'entreprise — à adapter avant la mise en ligne.
@@ -16,6 +13,8 @@ export const SITE = {
   locale: "fr_FR",
   address: "Paris, France",
   area: "Toute la France, déplacement possible à domicile",
+  /** Identifiant de la balise Google (Google Ads). */
+  gtagId: "AW-18503417665",
   tallyFormId: process.env.NEXT_PUBLIC_TALLY_FORM_ID || "dbWb8A",
 } as const;
 

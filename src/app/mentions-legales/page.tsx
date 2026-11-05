@@ -101,10 +101,16 @@ export default function LegalPage() {
             <a href="https://www.cnil.fr" rel="noopener noreferrer" target="_blank">cnil.fr</a>).
           </p>
 
-          <h2>Cookies</h2>
+          <h2 id="cookies">Cookies</h2>
           <p>
-            Le site n'utilise pas de cookies de mesure d'audience ni de publicité. Le formulaire Tally, service tiers
-            intégré à la page d'estimation, peut déposer ses propres cookies techniques.
+            Le site utilise la balise Google (Google Ads, société Google LLC) pour mesurer l'efficacité des annonces
+            publicitaires. Les cookies correspondants ne sont déposés qu'avec votre consentement, recueilli par le
+            bandeau affiché à votre première visite. Vous pouvez à tout moment modifier votre choix avec le lien «
+            Gérer les cookies » en bas de page. Sans votre accord, aucune donnée de mesure n'est collectée.
+          </p>
+          <p>
+            Le formulaire Tally, service tiers intégré à la page d'estimation, peut déposer ses propres cookies
+            techniques.
           </p>
 
           <h2>Responsabilité</h2>

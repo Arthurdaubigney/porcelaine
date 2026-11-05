@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ESTIMATION_HREF, FOOTER_NAV, SITE } from "@/lib/site";
+import { CookieSettings } from "./CookieBanner";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -36,7 +37,7 @@ export function Footer() {
       <div className="container footer__legal">
         <p>
           © {new Date().getFullYear()} {SITE.name}. Estimation gratuite, sans engagement.{" "}
-          <Link href="/mentions-legales">Mentions légales</Link>
+          <Link href="/mentions-legales">Mentions légales</Link> · <CookieSettings />
         </p>
         <p>Confidentialité garantie · Paiement immédiat</p>
         <p className="footer__credit">
