@@ -347,6 +347,17 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif-stack); font-weight: 5
 .footer__legal p { margin: 0; }
 @media (max-width: 760px) { .footer__grid { grid-template-columns: 1fr; gap: 2rem; } }
 
+/* ----- Bandeau de consentement ----- */
+.cookies { position: fixed; z-index: 60; left: var(--gutter); bottom: var(--gutter); width: min(30rem, calc(100% - 2 * var(--gutter)));
+  background: var(--cream); border: 1px solid var(--line); border-left: 3px solid var(--brass); border-radius: var(--radius); padding: 1.2rem 1.3rem; }
+.cookies__title { font-family: var(--font-serif-stack); font-size: 1.35rem; font-weight: 600; line-height: 1.1; margin-bottom: .4rem; }
+.cookies__text { font-size: .9rem; line-height: 1.55; color: var(--ink-soft); margin-bottom: 1rem; }
+.cookies__text a { text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: 3px; }
+.cookies__actions { display: flex; gap: .6rem; }
+.cookies__actions .btn { flex: 1; justify-content: center; min-height: 46px; padding: .8rem 1rem; font-size: .92rem; }
+.footer__linkbtn { background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.footer__linkbtn:hover { color: var(--brass); }
+
 /* ----- Mouvement réduit ----- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

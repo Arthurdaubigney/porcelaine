@@ -13,6 +13,8 @@ export const SITE = {
   locale: "fr_FR",
   address: "Paris, France",
   area: "Toute la France, déplacement possible à domicile",
+  /** Identifiant de la balise Google (Google Ads). */
+  gtagId: "AW-18503417665",
   tallyFormId: process.env.NEXT_PUBLIC_TALLY_FORM_ID || "dbWb8A",
 } as const;
 
