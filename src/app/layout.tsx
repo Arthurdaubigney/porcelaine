@@ -56,11 +56,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <a href="#contenu" className="skip">Aller au contenu</a>
+        <GoogleTag />
         <Header />
         <main id="contenu">{children}</main>
         <Footer />
         <CookieBanner />
-        <GoogleTag />
       </body>
     </html>
   );
